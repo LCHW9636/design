@@ -1,0 +1,55 @@
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+
+
+body {
+    font-family: 'Pretendard', serif;
+    font-size: 15px; 
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1.2; 
+    word-break: keep-all;
+
+}
+.wrapper {
+    width: 1280px; 
+    margin: 0 auto; 
+}
+* { 
+    padding: 0;
+    margin: 0;
+}
+.g_center {
+    text-align: center;
+}
+.g_center h1 {
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 900;
+    margin: 68px 0 13px 0;
+}
+.g_left {
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 50px 0 0 0;
+}
+.g_left h2 {
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0px 0 24px 0;
+}
+.g_right {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    padding: 40px;
+    text-align: right;
+    margin: 20px 0 0 0;
+}
+.g_right h2 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0px 0 24px 0;
+}

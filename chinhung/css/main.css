@@ -1,0 +1,156 @@
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+
+
+body {
+    font-family: 'Pretendard', serif;
+    font-size: 15px; 
+    color: #2d2d2d;
+    font-weight: 400;
+    line-height: 1.2; 
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px; 
+    margin: 0 auto; 
+}
+* { 
+    padding: 0; /* 모든 태그의 여백 삭제 */
+    margin: 0;
+    box-sizing: border-box;
+    /* padding 하고 border 넓이를 늘리는 요소인데 넓이를 늘리지 않도록 하는 속성 */
+
+}
+ul, ol, li {
+    list-style: none; /*ul li앞에 동그라미 삭제*/
+}
+a { /* a태그는 파란색에 underline이 기본적으로 생성됨*/
+    text-decoration: none; /*underline 제거*/
+    color: inherit;
+    /* 색상은 상속받아 - 파란색 말고 누군가가 상속해준 스타일을 적용*/
+}
+header {
+    height: 100px;
+}
+header .logo {
+    float: left;
+    margin: 31px 0 0 0;
+}
+header .gnb {
+    float: right;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    font-size: 22px;
+    color: #1d1d1d;
+    padding: 40px 28px 0 40px;
+    display: block;
+    /* a태그는 인라인 태그라서 padding이 제대로 적용되지 않음
+    padding 시키기 위해서는 block 태그로 변경 필요*/
+}
+/* a태그에 마우스를 오버했을때 - 가상선택자 */
+header .gnb ul li a:hover {
+    text-decoration: underline;
+}
+
+.visual {
+    /* 경로에서 ../는 폴더 밖으로 나가라는 명령
+    background에 아무리 큰 이미지를 넣어도 해당 영역이 존재하는만큼만 보임
+    background에 큰 이미지를 넣었고 그걸 다보이게 하려면 높이를 줘야함
+    backgorund에 큰 이미지 넣었다고 영역이 커지지않음 */
+    height: 1080px;
+    background: url(../Images/visual_bg2.png) center center no-repeat;
+    background-color: #fff;
+    /* 배경색 때문에 그 내부의 글자 색상이 달라졌다면 대표되는 색을 background랑 같이 지정하는게좋음 */
+}
+.visual h2 {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1;
+    padding: 60px 0 0 0;
+    color: #fff;
+}
+.visual p {
+    font-size: 50px;
+    color: #fff;
+}
+
+.biz h2 {
+    font-size: 50px;
+    color: #1d1d1d;
+    font-weight: 900;
+    text-align: center;
+    margin: 132px 0 80px 0;
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+.biz h2 strong {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: normal
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.biz ul li h3 {
+    margin: 15px 0 15px 0;
+    font-size: 40px;
+}
+
+.biz ul li a {
+    border: 1px solid #3d3d3d;
+    padding: 16px 70px 16px 70px;
+    display: inline-block;
+    margin: 24px 0 0 0;
+    /* display:block 넓이 100% 말 = 나를 감싸는 요소의 넓이 100%
+    그럼 a한테 display:block 주면 li와 넓이가 같아짐 
+    본인이 padding만 잘 들어가길 원했다면 display:inline-block; 을 입력행함*/
+}
+
+.brand {
+    margin: 113px 0 0 0;
+    height: 922px;
+    background: url(../Images/brand.png) center center no-repeat;
+    background-color: #fff;
+    color: #fff;
+}
+.brand h2 {
+    padding: 309px 0 0 0;
+    font-size: 50px;
+}
+.brand p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.brand a {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 23px 58px 23px 58px;
+    display: inline-block;
+    margin: 18px 0 0 0;
+    /*a태그는 인라인 태그라서 padding이 올바르게 적용되지 않음
+    그래서 display:block을 주면 a태그를 감싸는 요소 wrapper 넓이와 같아짐
+    display:block;은 넓이 100%라는 이야기 이므로
+    자신이 padding만 올바르게 주려면 display:inline-block
+    a태그에 padding이나 width를 주고자 할때는 일단 display:block을 주고 넓이가 너무 넓어지면
+    그때만 display:inline-block*/
+}
+
+.footer {
+    background-color: #1d1d1d;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 47px 0 47px 0;
+}
+footer .f_nav {
+    display: flex;
+    margin: 0 0 12px 0;
+}
+footer .f_nav ul li {
+    margin: 0 31px 0 0;
+}
+footer f_nav .privacy {
+    color: rgba(255, 255, 255, 0.6);
+}
