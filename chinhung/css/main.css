@@ -139,7 +139,7 @@ header .gnb ul li a:hover {
     그때만 display:inline-block*/
 }
 
-.footer {
+footer {
     background-color: #1d1d1d;
     color: rgba(255, 255, 255, 0.8);
     padding: 47px 0 47px 0;
@@ -148,9 +148,14 @@ footer .f_nav {
     display: flex;
     margin: 0 0 12px 0;
 }
-footer .f_nav ul li {
+footer .f_nav li {
     margin: 0 31px 0 0;
 }
-footer f_nav .privacy {
+.privacy {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 900;
+}
+
+.copyright {
     color: rgba(255, 255, 255, 0.6);
 }
