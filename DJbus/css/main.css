@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../font/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'), url(../font/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Black.woff) format('woff');
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px; 
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px; 
+    margin: 0 auto; 
+}
+#wrap { /* id="wrap"에 적용되는 스타일*/
+    min-width: 1280px;    
+}
+* { 
+    padding: 0; /* 모든 태그의 여백 삭제 */
+    margin: 0;
+    box-sizing: border-box;
+    /* padding 하고 border 넓이를 늘리는 요소인데 넓이를 늘리지 않도록 하는 속성 */
+}
+a { /* a태그는 파란색에 underline이 기본적으로 생성됨*/
+    text-decoration: none; /*underline 제거*/
+    color: inherit;
+    /* 색상은 상속받아 - 파란색 말고 누군가가 상속해준 스타일을 적용*/
+}
