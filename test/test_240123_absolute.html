@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/absolute.css">
+    <title>absolute 테스트</title>
+</head>
+<body>
+    <div id="wrap">
+        <div class="wrapper">
+            <h1>h1태그 제일 큰 제목</h1>
+            <h2>h2태그</h2>
+            <h3>h3태그</h3>
+            <h4>h4태그</h4>
+            <h5>h5태그</h5>
+            <h6>h6태그</h6>
+            <strong>strong 태그</strong>
+            <em>em태그</em>
+            <a href="#">a 태그</a>
+
+            <div class="service">
+                <p>한군구세군(사령관 장만희)이 설립 116년 역사 이래 첫 외국인 사관(목사)을 배출했다.
+
+                    한국구세군은 지난 20일 경기 과천의 구세군과천영문(교회)에서 열린 97기 임관임명식에서 신임 사관 10명 중 3명이 캄보디아 출신이라고 23일 밝혔다. 특히 소완 메따(33) 신임 사관은 한국 사관학교를 졸업하는 첫 외국인 사관이다. 나머지 두 명의 외국인 신임 사관은 캄보디아 현지 활동으로 사관 임관을 받았다. 한국구세군은 캄보디아 대표부를 담당하고 있다.
+                <br><br>
+                긴문장은 내가 꼭 줄을 바꿔야 하는 곳에만 br태그를 주고 그외에는 css에서
+                넓이를 제한해서 자동으로 줄이 바뀌도록 한다.</p>
+            </div>
+
+            <div class="notice">
+                <div class="tit">나는 제목이다.</div>
+                <div class="sub_tit">
+                    position:absolute를 주면 block요소라도 넓이가 사라짐
+                    넓이가 필요하면 반드시 줘야함. br
+                    position:absolute;와 display:block;(넓이 100%)을 동시에줌.
+                position:absolute가 이김. 넓이가 inline-block처럼 콘텐츠 넓이만큼 들어감.
+                </div>
+                <div class="cnt">
+                    (left)왼쪽 정렬하면 왼쪽을 기준으로 콘텐츠가 오른쪽
+                    (right)오른쪽 정렬하면 오른쪽 기준으로 콘텐츠가 정렬
+                </div>                
+            </div>
+            <div class="community">
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
