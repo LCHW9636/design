@@ -83,13 +83,6 @@ ul, ol, li {
     line-height: 1.2;
 }
 
-/* .biz .ar와 .biz .edu 둘다에게 동일 스타일을 적용할때 사용 - 다중선택자라고 함*/
-.biz .art, .biz .edu {
-    display: flex; /* inner와 img가 좌우로 배치*/
-
-}   
-/* DTC아트센터와 이구열 장학재단 h2를 한꺼번에 스타일 줄 수 있음
-    어차피 스타일이 동일하기 때문에 각자를 감싸는 영역 art edu를 빼고 호출 */
 .biz h2 {
     color: #1d1d1d;
     font-size: 30px;
@@ -100,30 +93,48 @@ ul, ol, li {
     font-size: 20px;
     margin: 0 0 15px 0;
 }
-.biz .btn_wrap a {
-    border: 1px solid #999999;
-    padding: 10px 23px 10px 23px;
-    display: inline-block;
-    /* padding값을 적용시키기 위해 display:block; 을 주지만
-    가로 100%로 넓어져서 display:inline-block으로 변경
-    displayinline-block은 내가 주지 않은 여백이 좌우에 들어감
-    그 여백을 감안하고 좌우여백을 주면됨. (글자의 행간 감안하고 여백주듯이)*/
+.biz {
+    margin: 78px 0 78px 0;
 }
-
+.biz .art,
 .biz .edu {
-    justify-content: flex-end; /*내부 콘텐츠를 감싸는 영역 오른쪽에 붙이기 */
-    text-align: right; /* 이구열 장학 재단은 모든 콘텐츠가 오른쪽 정렬*/
+    display: flex;
+}
+.biz .edu {
+    justify-content: flex-end; /*오른쪽 정렬*/
+    margin: 60px 0 0 0;
 }
 .biz .art .inner {
-    margin: 0 0 0 60px;
+    margin: 69px 0 69px 60px;
 }
 .biz .edu .inner {
-    margin: 0 60px 0 0;
-    weight: 408px
+    margin: 65px 60px 65px 0;
+    width: 407px;
+    text-align: right;
+}
+.biz .art h2,
+.biz .edu h2 {
+    color: #1d1d1d;
+    font-size: 30px;
+    margin: 0 0 15px 0;
+}
+.biz .art .btn_wrap,
+.biz .edu .btn_wrap {
+    display: flex;
+}
+.biz .edu .btn_wrap {
+    justify-content: flex-end
+}
+.biz .art .btn_wrap a,
+.biz .edu .btn_wrap a {
+    border: 1px solid #999999;
+    padding: 15px 23px 10px 23px;
+    display: block;
 }
 .biz .art .btn_wrap a {
-    margin: 15px 7px 0 0;
+    margin: 15px 14px 0 0;
 }
 .biz .edu .btn_wrap a {
-    margin: 15px 0 0 7px;
+    justify-content: flex-end;
+    margin: 15px 0 0 14px;
 }

@@ -52,7 +52,7 @@ header .gnb ul {
 header .gnb ul li a {
     font-size: 22px;
     color: #1d1d1d;
-    padding: 40px 28px 0 40px;
+    padding: 40px 20px 0 20px;
     display: block;
     /* a태그는 인라인 태그라서 padding이 제대로 적용되지 않음
     padding 시키기 위해서는 block 태그로 변경 필요*/
