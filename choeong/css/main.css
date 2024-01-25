@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../font/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff) format('woff2'), url(./woff/Pretendard-Bold.woff) format('woff');
+}
+body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px; 
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px; 
+    margin: 0 auto; 
+}
+#wrap { /* id="wrap"에 적용되는 스타일*/
+    min-width: 1280px;    
+}
+* { 
+    padding: 0; /* 모든 태그의 여백 삭제 */
+    margin: 0;
+    box-sizing: border-box;
+    /* padding 하고 border 넓이를 늘리는 요소인데 넓이를 늘리지 않도록 하는 속성 */
+}
+a { /* a태그는 파란색에 underline이 기본적으로 생성됨*/
+    text-decoration: none; /*underline 제거*/
+    color: inherit;
+    /* 색상은 상속받아 - 파란색 말고 누군가가 상속해준 스타일을 적용*/
+}
+ul, ol, li {
+    list-style: none; /*ul li앞에 동그라미 삭제*/
+}
+address, em {
+    /* em태그와 address태그는 기본적으로 이텔릭체임 
+       디자인상 이텔릭을 사용하기 위해서 쓰지 않음 - 최근 이텔릭체를 디자인 하지 않음
+       그래서 태그에 있는 기본 이텔릭을 초기화함*/
+    font-style: normal;
+}
+/* 글자를 두껍게하고 글자 크기를 조정하는 태그 -
+    body 태그가 선언한 속성대로 적용될 수 있게 초기화
+    브라우저가 기본적으로 적용한 스타일이 적용되지 않도록 막음 */
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.header {
+    /* body를 기준으로 정렬
+        position값을 주면 (예외 relative) block요소라도 
+        콘텐츠가 존재하는 만큼만 넓이값이 있음
+        block요소는 원래 넓이가 100%임/
+        이걸 생각하고 코딩하면 적용이안됨
+    */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* header가 absolute면 width100% 필수*/
+    height: 100px;
+    color: #fff;
+}
+.header .logo {
+    float: left;
+    margin-top: 32px;
+}
+.header .gnb ul {
+    float: right;
+    display: flex;
+}
+.header .gnb ul a {
+    font-size: 22px;
+    padding: 34px 28px;
+    /*padding을 2개만 써주면 첫번째 값은 위아래 같이 적용
+        두번째 값은 좌우 같이 적용*/
+    display: block;
+}
+
+.visual {
+    /* 넓이와 높이는 제한이기 때문에 신중하게..
+    배경이 내부 콘텐츠 만큼 늘어나는게 아니라 엄청큼
+    이 배경 이미지를 모두 보이도록 하려고 */
+    height: 900px;
+    background: url(../images/visual_bg.png) center center no-repeat;
+    border-radius: 0 0 300px 0; /* 시계방향 왼쪽 상단부터 시작 */
+    /* 이미지 모서리 둥글게 디자인했다면 대부분 이미지를 네모반듯하게 저장하고
+    css에서 둥글게 처리하는 경우가 많음*/
+}
+.visual h2 {
+    text-align: center; /*이미지가 가운데*/
+    padding: 351px 0 0 0;
+}
+.visual .photo {
+    width: 104px;
+    height: 104px;
+    background-color: #29669C;
+    display: block;
+    border-radius: 100%;
+    color: #fff;
+    /* 동그라미는 넓이와 높이를 주고
+    border-radius:100%로 줌 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    /* 내부에 있는 모든 요소 가운데 */
+}
+.visual .photo i {
+    padding: 19px 0 2px 0;
+    display: block;
+    line-height: 1.1;
+}
+.visual .photo span {
+    display: block;
+    /* i태그와 span태그 모두 inline태그라서 줄바꿈이 안됨.
+        이때 span태그에 block을 주면 너비가 100%가 돼서 줄이 바뀜 */
+}
