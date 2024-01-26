@@ -63,6 +63,10 @@ h1, h2, h3, h4, h5, h6, strong {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 100;
+    /* position을 준 요소가 깔려서 안보일 때 사용
+    z-index가 높은 요소가 더 위에 나타남
+    그래서 header는 항상 위에 있어야하기에 100을 줌 */
     width: 100%; /* header가 absolute면 width100% 필수*/
     height: 100px;
     color: #fff;
@@ -92,6 +96,7 @@ h1, h2, h3, h4, h5, h6, strong {
     border-radius: 0 0 300px 0; /* 시계방향 왼쪽 상단부터 시작 */
     /* 이미지 모서리 둥글게 디자인했다면 대부분 이미지를 네모반듯하게 저장하고
     css에서 둥글게 처리하는 경우가 많음*/
+    position: relative; /*photo absolute 정렬의 기준*/
 }
 .visual h2 {
     text-align: center; /*이미지가 가운데*/
@@ -109,6 +114,12 @@ h1, h2, h3, h4, h5, h6, strong {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     text-align: center;
     /* 내부에 있는 모든 요소 가운데 */
+    position: absolute;
+    bottom: -55px; /* body 기준 */
+    left: calc(50% + 584px);
+    /* 사이즈가 크던 작던 가운데는 모두 동일한 위치
+    가운데를 기준으로(50%) 오른쪽으로 584px만큼 이동 calc()넓이나, 여백이나 
+        위치값 등을 계산할때 사용 %와 px처럼 단위가 다른 수는 계산할때 사용 */
 }
 .visual .photo i {
     padding: 19px 0 2px 0;
@@ -119,4 +130,253 @@ h1, h2, h3, h4, h5, h6, strong {
     display: block;
     /* i태그와 span태그 모두 inline태그라서 줄바꿈이 안됨.
         이때 span태그에 block을 주면 너비가 100%가 돼서 줄이 바뀜 */
+}
+
+.culture {
+    margin-top: 76px;
+}
+.culture .inner {
+    position: relative;
+    /* more의 absolute 정렬 기준 */
+}
+.culture h2 {
+    color: #1d1d1d;
+    font-size: 28px;
+    font-weight: 700;
+}
+.culture .sub_tit {
+    margin: 7px 0 32px 0;
+}
+.culture ul {
+    display: flex;
+    justify-content: space-between;
+}
+.culture ul li {
+    width: 480px;
+}
+.culture ul li a h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 12px 0 9px 0;
+
+}
+.culture .more {
+    /* inner를 기준으로 정렬 */
+    position: absolute;
+    right: 18px;
+    top: 58px;
+    display: flex;
+    align-items: center;
+    /* 글자와 아이콘 사이즈가 다른 요소가 좌우로 들어갈때
+    서로 위아래 가운데 정렬 하려면 align-items: center*/
+    /*border: 1px solid #999;
+    background-color: #ededed;
+    /*좌우만 동그랗게 처리하려면 높이의 절반을 border-radius로 줌 */
+    /*border-radius:100%
+    border-radius: 13px;
+    padding: 5px 13px */
+    /* 위아래 좌우 여백이 같은 경우 - 위아래 값 좌우값 두개만 입력 */
+}
+
+.culture .more span {
+    margin-right: 5px;
+}
+
+.tour {
+    margin-top: 70px;
+}
+
+.tour h2 {
+    color: #1d1d1d;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 19px;
+}
+.tour ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour ul li {
+    width: 190px;
+    /* a가 늘어난 만큼 늘어남. li의 높이는 a한테 줌 
+        li사이즈와 a사이즈를 똑같이 주기 위해서
+        li에 높이를 주고 a에 height:100%를 주면 안되는가? - 안됨
+        높이 100%는 안들어가는 경우가 많음 (넓이 100%는 됨) */
+    color: #fff;
+}
+.tour ul li.tour01 {
+    background: url(../images/tour01.png) center center no-repeat;
+}
+.tour ul li.tour02 {
+    background: url(../images/tour02.png) center center no-repeat;
+}
+.tour ul li.tour03 {
+    background: url(../images/tour03.png) center center no-repeat;
+}
+.tour ul li.tour04 {
+    background: url(../images/tour04.png) center center no-repeat;
+}
+/* li.active (띄어쓰기x)는 li태그들 중에서 active 클래스를 준 li를 선택하는 선택자*/
+.tour ul li.active {
+    width: 626px;
+}
+.tour ul li a {
+    height: 320px;
+    display: block;
+}
+.tour ul li a h3 {
+    padding: 244px 0 0 21px ;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+.tour ul li a p {
+    display: none; /*숨김*/
+}
+.tour ul li.active a {
+    padding: 0 219px 0 30px;
+    text-align: left;
+}
+.tour ul li.active a h3 {
+    padding: 219px 0 0 0 ;
+}
+.tour ul li.active a p {
+    /* display:none 으로 숨김처리한 것을 다시 나타나게 하려면 dispaly:none을 제외한 그 어떠한 속성을 줘도 나타남.
+        단, 해당 스타일이 적용되기 때문에 맞춰서 줘야함. 일반적으로 속성이 필요하지 않으면 block을 줌*/
+    display: block;
+}
+.tour .inner {
+    position: relative;
+}
+.tour .more {
+    position: absolute;
+    right: 18px;
+    top: 58px;
+    display: flex;
+    align-items: center;
+
+}
+.tour .more span {
+    margin-right: 10px;
+}
+
+.community {
+    height: 900px;
+    background: url(../images/community_bg.png) center center no-repeat;
+    padding-top: 122px;
+    margin-top: 122px;
+}
+.community .inner {
+    display: flex;
+    color: #fff;
+    margin-top: 122px;
+}
+.community .tit {
+    width: 327px;
+}
+.community .sub_tit {
+    font-size: 30px;
+    letter-spacing: -0.05em;
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .tit h2 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+.community .tit p {
+    margin-top: 10px;
+}
+.community .notice {
+    width: 517px;
+    height: 390px;
+    background-color: rgba(0, 41, 77, 0.6);
+    border-radius: 20px;
+    padding: 41px 40px 0 40px;
+}
+.community .notice h3 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 12px;
+}
+.community .notice ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
+}
+.community .notice ul li:last-child {
+    border-bottom: 0; /*마지막 li border는 선긋지말라는 명령어*/
+}
+.community .notice ul li a {
+    line-height: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+.community .notice ul li a span {
+    color: rgba(255, 255, 255, 0.8);
+}
+.community .service {
+    width: 408px;
+    margin: 117px 0 28px 28px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+.community .service ul {
+    display: flex;
+    /* flex는 하위요소를 모두 다 좌우 한줄로 배치하려는 특징이 있음
+    그래서 넓이는 줄여서라도 좌우로 배치함
+    내 넓이에 따라서 한줄에 들어갈 수 있는 만큼만 들어가고 줄바꿈이 되려면 flex-wrap: wrap */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.community .service ul li {
+    width: 190px;
+    margin-bottom: 15px;
+}
+.community .service ul li a {
+    height: 129px;
+    background-color: rgba(0, 41, 77, 0.6);
+    border-radius: 15px;
+    display: block;
+    padding: 30px 30px;
+    position: relative; /* i태그 absolute 정렬의 기준*/
+}
+.community .service ul li a strong {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+.community .service ul li a img {
+    /* 감싸고 있는 a태그를 기준으로 정렬*/
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.footer {
+    background-color: #1d1d1d;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 72px 0 72px 0;
+}
+.footer .footer_wrap {
+    display: flex;
+    justify-content: space-between
+}
+.footer .f_nav {
+    display: flex;
+}
+.footer .f_nav li {
+    margin-right: 35px;
+}
+.footer .f_nav li.privacy {
+    font-weight: 700;
+}
+.footer .f_info {
+    display: flex;
+    margin: 18px 0;
+}
+.footer .f_info address,
+.footer .f_info span {
+    margin-right: 35px;
 }
