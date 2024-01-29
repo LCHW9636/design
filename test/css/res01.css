@@ -310,8 +310,7 @@ button {
         top: auto;
         margin: 20px 0 50px 0;
         text-align: center;
-    }
-    
+    } 
     .news .more a {
         border-radius: 20px; /*높이의 절반*/
         line-height: 37px;
