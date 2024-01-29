@@ -204,3 +204,119 @@ button {
         display: inline-block;
     }
 }
+
+
+.news {
+    margin-top: 80px;
+}
+.news h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #666;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+.news h2 strong {
+    color: #1d1d1d;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 299px;
+}
+/* a태그 안에 많은 요소들이 들어가면 display를 주는게 좋음*/
+.news ul li a {
+    display: block;
+}
+.news ul li a strong {
+    display: block; /* 제목은 strong, 날짜는 span으로 - 디자인상 줄바꿈 필요
+    이때 display:block; 각 요소가 block요소로 변경되어 둘이 한줄에 나타나지 않음*/
+    font-size: 20px;
+    color: #1d1d1d;
+    margin: 12px 0;
+}
+.news ul li a span {
+    display: block;
+    color: #666;
+}
+.news .notice_wrap {
+    position: relative
+    /* more 정렬의 중심*/
+}
+.news .more {
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+
+.news .more a {
+    border: 1px solid #999;
+    border-radius: 30px; /*높이의 절반*/
+    line-height: 51px;
+    /* 버튼은 line-height의 높이를 갖고 글자도 위아래 가운데 정렬함*/
+    padding: 0 39px;
+    display: block;
+}
+/* a태그에 마우스를 오버했을때 */
+.news .more a:hover {
+    background-color: #3d3d3d;
+    color: #fff;
+}
+@media screen and (max-width:640px){
+    .news {
+        margin-top: 45px;
+    }
+    .news h2 {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+    .news h2 br {
+        display: none;
+        /* br태그를 숨김처리하기때문에 줄바꿈이 사라짐
+        br태그는 여는 태그 닫는 태그가 없는 단독 태그라 가능*/
+    }
+    .news ul {
+        flex-wrap: wrap;
+        /* 한줄에 2개씩으로 변경
+        그럼 display:flex 유지하고 flex-wrap: wrap; 줄바꿈 허용
+        원래 flex는 죽어도 한줄로 모든 요소를 배치하려고 한다.*/
+    }
+    .news ul li {
+        width: calc(50% - 8px);
+        /* 한줄에 2개씩 사이에 여백 16px를 고정으로 배치 
+        넓이는 %고 여백은 px이라면 계산하기 위해서 
+        calc(100%/갯수 - 여백/갯수px)*/
+        margin-bottom: 20px;
+    }
+    .news ul li a img {
+        width: 100%;
+        /* 감싸는 요소의 넓이에 꽉차게 들어감 높이는 비율에 맞게 조정 */
+    }
+    /* a태그 안에 많은 요소들이 들어가면 display를 주는게 좋음*/
+    .news ul li a strong {
+        font-size: 15px;
+        margin: 5px 0;
+        /* 제목은 무조건 2줄만 출력 */
+        line-height: 1.2;
+        height: 2.4em; /* 행간 * 주고싶은 줄수 = 단위 em*/
+        overflow: hidden; /* 제한한 높이보다 콘텐츠가 길면 숨기기 (넘치는 요소 잘라버리기)*/
+    }
+    .news .more {
+        /* absolute 해제하고 원래 코딩 순서대로 */
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 20px 0 50px 0;
+        text-align: center;
+    }
+    
+    .news .more a {
+        border-radius: 20px; /*높이의 절반*/
+        line-height: 37px;
+        /* 버튼은 line-height의 높이를 갖고 글자도 위아래 가운데 정렬함*/
+        padding: 0 27px;
+        display: inline-block;
+    }
+}/* media*/
