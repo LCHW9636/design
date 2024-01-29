@@ -256,8 +256,8 @@ button {
 }
 .tour .more {
     position: absolute;
-    right: 18px;
-    top: 58px;
+    right: 0px;
+    top: 12px;
     display: flex;
     align-items: center;
 
@@ -415,7 +415,4 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 0 9px;
-}
-.footer .family_site i img {
-    color: #fff;
 }
