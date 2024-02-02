@@ -33,10 +33,13 @@ body {
     #wrap { 
         min-width: 320px; /* 모바일 최소사이즈 */    
     }
+}
 
-.header{
+
+/* header가 스크롤이 되면 jquery에서 header에 fixed라는 클래스를 추가할 예정 그때의 스타일 */
+.header {
     /* body를 기준으로 정렬 */
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 100; /* header를 맨 위에 배치하기 위해 - 다른 요소에 가려서 안 보일까봐*/
@@ -141,6 +144,15 @@ body {
         line-height: 0;
         margin: 13px 0 13px 0;
     }
+    .header.fixed .gnb .gnb_open {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url(../images/gnb_open.svg) no-repeat center center;
+        font-size: 0;
+        line-height: 0;
+        margin: 13px 0 13px 0;
+    }
     .header .gnb ul {
         display: none; /*모바일에서 메뉴는 메뉴 열기 버튼을 터치해 나타남*/
     }
@@ -150,8 +162,25 @@ body {
     .header .lang {
         display: none;
     }
-
+    
 }/*media*/
+.header.fixed{
+    color: #1d1d1d;
+    border-bottom: 0;
+    background-color: #fff;
+}
+.header.fixed .logo a {
+    background: url(../images/logo.svg) no-repeat left top / contain;
+}
+.header.fixed .login::before {
+    background: url(../images/login.svg) no-repeat center center;
+    content: "";
+}
+.header.fixed .lang::before {
+    background: url(../images/lang.svg) no-repeat center center;
+    content: "";
+}
+
 
 .visual {
     /* background 사이즈 조절
@@ -212,3 +241,106 @@ body {
         display: none;
     }
 } /*media*/
+
+.service {
+    background-color: #F6F6F6;
+    padding: 54px 0 0 0;
+}
+
+.service h2 {
+    display: none; /*웹 표준상 제목을 썼지만 디자인에는 없는 요소라서 숨김*/
+}
+.service ul {
+    display: flex;
+}
+.service ul li {
+    width: 16.66%;
+    text-align: center;
+    /* li가 6개라서 6/100 = 16.66 나눈 값 */
+}
+.service ul li a {
+    display: inline-block;
+    padding: 72px 0 50px 0; /* 아이콘이 들어갈 자리 */ 
+    position: relative;
+}
+.service ul li a::before {
+    position: absolute;
+    left: calc(50% - 43px);
+    top: 0;
+    content: "";
+    width: 85px;
+    height: 63px;
+}
+.service ul li.service1 a::before {
+    background: url(../images/service01.svg) no-repeat center center;
+}
+.service ul li.service2 a::before {
+    background: url(../images/service02.svg) no-repeat center center;
+}
+.service ul li.service3 a::before {
+    background: url(../images/service03.svg) no-repeat center center;
+}
+.service ul li.service4 a::before {
+    background: url(../images/service04.svg) no-repeat center center;
+}
+.service ul li.service4 a::before {
+    background: url(../images/service04.svg) no-repeat center center;
+}
+.service ul li.service5 a::before {
+    background: url(../images/service05.svg) no-repeat center center;
+}
+.service ul li.service6 a::before {
+    background: url(../images/service06.svg) no-repeat center top 5px
+}
+@media screen and (max-width:640px){
+    .service {
+        background-color: #F6F6F6;
+        padding: 26px 0 10px 0;
+    }
+    .service ul {
+        flex-wrap: wrap; /* 두줄 허용 */
+    }
+    .service ul li {
+        width: 33.33%;
+        /* li가 6개라서 6/100 = 16.66 나눈 값 */
+    }
+    .service ul li a {
+        text-align: center;
+        display: block;
+        padding: 62px 0 0px 0; /* 아이콘이 들어갈 자리 */ 
+        position: relative;
+        margin-bottom: 18px;
+    }
+    .service ul li a::before {
+        position: absolute;
+        left: calc(50% - 38px);
+        top: 0;
+        content: "";
+        width: 79px;
+        height: 63px;
+    }
+    .service ul li.service1 a::before {
+        background-size: 52px auto;
+    }
+    .service ul li.service2 a::before {
+        background-size: 37px auto;
+    }
+    .service ul li.service3 a::before {
+        background-size: 79px auto;
+    }
+    .service ul li.service4 a::before {
+        background-size: 51px auto;
+    }
+    .service ul li.service5 a::before {
+        background: url(../images/service05.svg) no-repeat center top 14px;
+        background-size: 33px auto;
+    }
+    .service ul li.service6 a::before {
+        background: url(../images/service06.svg) no-repeat center top 18px;
+        background-size: 39px auto;
+    }
+}
+
+.footer {
+    height: 500px;
+}

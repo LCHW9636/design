@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <!-- jqeury를 작동시키는 파일-->
+    <script src="/Samsung/js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
     <title>삼성꿈장학재단</title>
 </head>
 <body>
     <div id="wrap">
-        <header class="header">
+        <!-- 스크롤을 내렸을때 jquery에서 header한테 fixed라는 클래스를 줄 예정-->
+        <header class="header fixed">
             <div class="wrapper">
                 <h1 class="logo">
                     <!-- 로고는 기본은 흰색, header가 고정되었을 때는 칼라로 변경
@@ -48,7 +52,22 @@
                 </div> <!-- wrapper-->
             </section>
             <section class="service">
-                <div class="wrapper"></div> <!-- wrapper-->
+                <div class="wrapper">
+                    <!-- section태그안에는 반드시 h2~h6사이의 제목이 존재해야함
+                    근데 디자인상 제목으로 볼 요소가 없다면 
+                    제목을 써주고 css에서 숨김처리함 -->
+                    <h2>공모안내</h2>
+                    <!-- li의 순서가 변경되어도 디자인이 유지될 수 있도록
+                    각각의 li에 clas명 주기 -->
+                    <ul>
+                        <li class="service1"><a href="#n">꿈장학<br>공모안내</a></li>
+                        <li class="service2"><a href="#n">SOS장학<br>공모안내</a></li>
+                        <li class="service3"><a href="#n">대학희망장학<br>공모안내</a></li>
+                        <li class="service4"><a href="#n">배움터교육지원<br>사업공모안내</a></li>
+                        <li class="service5"><a href="#n">글로벌 장학사업<br>공모안내</a></li>
+                        <li class="service6"><a href="#n">특별사업<br>공모안내</a></li>
+                    </ul>
+                </div> <!-- wrapper-->
             </section>
             <section class="biz">
                 <div class="wrapper"></div> <!-- wrapper-->
