@@ -531,6 +531,9 @@ html, body {
 .interview .list ul li a {
     display: block;
 }
+.interview .list ul li:nth-child(2) {
+    margin: 63px 0 0 0;
+}
 .interview .list ul li a .photo {
     border-radius: 50px 0 50px 0;
     overflow: hidden;
@@ -538,4 +541,15 @@ html, body {
        overflow:hidden;을 꼭 줘야 이미지가 짤림 */
     font-size: 0;
     line-height: 0;
+}
+.interview .list ul li a .photo > span {
+    filter: brightness(50%)
+}
+/* 디자인상 두번째 li에 스타일이 다르다면
+    css에서도 nth-child로 선택한다. */
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 50px 0 50px;
+}
+.interview .list ul li a .photo img {
+    filter: grayscale(100%); /* 흑백 */
 }
