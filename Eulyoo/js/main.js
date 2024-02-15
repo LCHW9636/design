@@ -22,6 +22,46 @@ $(document).ready(function(){
         },
 
     });
+    
+    
+    /* 
+    .visual .swiper .stop
+    정지버튼을 누르면 팝업 정지 - 재생버튼이 보임 정지버튼은 숨김
+
+    .visual .swiper .play
+    재생버튼을 누르면 팝업 다시 재생됨 - 재생버튼 숨김, 정지버튼 나타남
+    */
+   $('.visual .swiper .stop').on('click', function(){
     swiper.autoplay.stop();  /* 일시정지 기능 */
+    $(".visual .swiper .play").show();		/*보이게 하기*/
+    $(".visual .swiper .stop").hide();		/*숨기기*/
+   })
+   $('.visual .swiper .play').on('click', function(){
     swiper.autoplay.start();  /* 재생 기능 */
+    $(".visual .swiper .stop").show();		/*보이게 하기*/
+    $(".visual .swiper .play").hide();		/*숨기기*/
+   })
+
+   /* 브라우저를 스크롤 하면 header에 fixed 클래스를 추가할 예정 
+      단, 스크롤이 조금이라도 내려가면 fixed를 추가하지만 다시 꼭대기로 올라가면
+      다시 상단으로 이동하면 fixed 클래스 삭제
+      -- 스크롤 값을 아는 게 필요*/
+
+    let scrolling //브라우저가 스크롤 된 값을 저장
+
+    function scroll_chk(){ //함수의 선언
+        scrolling = $(window).scrollTop() //브라우저가 스크롤 된 값을 scrolling에 저장
+        // console.log(scrolling)
+        if(scrolling > 0){ //스크롤을 내렸을때
+            $('.header').addClass('fixed')
+        }else{ //스크롤이 맨 위에 있는 경우 - 꼭대기
+            $('.header').removeClass('fixed')
+        }
+   }
+    scroll_chk() //함수의 실행 -- 브라우저가 로딩 되었을때 단 1번 실행 
+
+    $(window).scroll(function(){
+        scroll_chk() // 함수의 실행 -- 스크롤 할때마다 
+   })
+
 }) //$(document).ready
