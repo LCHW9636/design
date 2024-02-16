@@ -153,8 +153,10 @@
                     <ul>
                         <!-- 무조건 하나가 over 상태의 디자인을 유지
                         마우스를 오버하면 오버 대상 변경
-                        마우스를 아웃하며 ㄴ마지막에 마우스를 올렸던 요소가
-                        over 상태를 유지-->
+                        마우스를 아웃하며 ㄴ마지막에 마우스를 올렸던 요소가 over 상태를 유지
+                        처음에는 하나의 li에 active 클래스가 들어가 있는 상태고
+                        다른 요소에 마우스를 오버하면 해당 li에만 active 클래스가
+                        추가되는 방식 (기준 li에 active 클래스는 삭제)-->
                         <li>
                             <a href="#n">
                                 <div class="photo"><span><img src="Images/interview01.png" alt="작가 신웅재 사진"></span></div>
@@ -192,8 +194,96 @@
                 </div>
             </div>
         </section>
-        <section class="news"></section>
-        <footer class="footer"></footer>
+        <section class="news">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="tit">
+                        <h2>을유의 <br>소식</h2>
+                        <p>을유문화사의 <br>새로운 소식을 만나보세요.</p>
+                    </div><!-- tit -->
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="Images/news01.png" alt="사진"></span>
+                                    <h3>하인리히 하이네, 『하이네 여행기』</h3>
+                                    <p>19세기 독일 문학을 대표하는 시인 하인리히 하이네의 시와 산문</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="Images/news02.png" alt="사진"></span>
+                                    <h3>찰스 밍거스 : 소리와 분노</h3>
+                                    <p>혁신적인 작곡가이자 베이스 연주자인 찰스 밍거스의 삶과 음악 전반을 아우르는 평전</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="Images/news03.png" alt="사진"></span>
+                                    <h3>아우구스트 스트린드베리, 『꿈의 연극』</h3>
+                                    <p>스웨덴의 셰익스피어로 불리는 천재 작가 스트린드베리의 대표작</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="Images/news04.png" alt="사진"></span>
+                                    <h3>쇼펜하우어의 행복론과 인생론</h3>
+                                    <p>쇼펜하우어만의 생활 철학을 담은 행복의 기술과 인생 조언</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="Images/news05.png" alt="사진"></span>
+                                    <h3>윤광준의 생활명품 101</h3>
+                                    <p>작가 윤광준이 엄선한 아름답고 쓸모 있는 일상의 물건 101선</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <span><img src="Images/news06.png" alt="사진"></span>
+                                    <h3>르네 샤르, 『격정과 신비』</h3>
+                                    <p>20세기 프랑스를 대표하는 시인 르네 샤르의 작품 세계를 국내 최초로 선보이는 결정판</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n">더보기</a></div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+                <div class="wrapper">
+                    <!-- 만약 pc와 모바일의 코딩순서가 다르다면 모바일의 코딩 순서를 따름 -->
+                    <div class="inner">
+                        <div class="footer_txt">
+                            출판은 <br>
+                            이윤을 추구하는 사업보다는 <br>
+                            사회에 공헌하는 <strong>문화 사업</strong>
+                        </div>
+                        <div class="footer_info">
+                            <strong>위치</strong>
+                            <span>03997 서울 마포구 서교동 469-48(월드컵로16길 52-7)</span>
+                            <strong>연락처</strong>
+                            <span>전화번호: 02-733-8153 <br>
+                                팩스: 02-732-9154 <br>
+                                메일: eulyoo1945@eulyoo.co.kr</span>
+                                <strong>소셜네트워크</strong>
+                                <span>
+                                    <!-- 다른 홈페이지로 이동 반드시 target="_blank" 새창으로 연결
+                                        target="_blacnk"가 포함되면 반드시 title="새창"으로
+                                        새창으로 열리는 사이트임을 공지해야함 (웹접근성)-->
+                                        <a href="https://m.post.naver.com/my.nhn?memberNo=20168227" target="_blank" title="새창">블로그</a>
+                                    <a href="https://www.instagram.com/eulyoo/" target="_blank" title="새창">인스타그램</a>
+                                    <a href="https://www.facebook.com/eulyoo/" target="_blank" title="새창">페이스북</a>
+                                </span>
+                        </div>
+                        <div class="copyright">
+                            <img src="Images/logo_w.png" alt="을유문화사">
+                            <span>COPYRIGHT © 2020 EULYOO PUBLISHING CO. LTD.</span>
+                        </div>
+                    </div>
+                </div>
+        </footer>
     </div> <!-- wrap -->
 </body>
 </html>
