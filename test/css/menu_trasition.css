@@ -1,0 +1,156 @@
+@charset "urf-8";
+@import url(default.css);
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../font/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff) format('woff2'), url(./woff/Pretendard-Bold.woff) format('woff');
+}
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px; 
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1.4;
+    word-break: keep-all;
+    word-wrap: break-word;
+    /* 단어별로 줄바꿈을 하는데 단어가 엄청 긴 경우 그건 강제 줄바꿈을 허용*/
+}
+.wrapper {
+    width: 1280px; 
+    margin: 0 auto; 
+}
+#wrap { 
+    min-width: 1280px;    
+    position: relative;
+    /* 가로스크롤바가 생성되었을때 body를 기준으로 정렬하는 요소 깨짐
+    그래서 모든 요소는 r기본적으로 body가 아닌 wrap을 기준으로 정렬하도록
+    position:relative*/
+}
+
+/* 640px 이하일때 스타일 - 640이하는 모바일, 초과는 탭 */
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px; 
+    }
+    .wrapper {
+        width: auto; /* 넓이값 준 넓이값 해제(취소) - block 요소라면 넓이가 100%가 됨 */
+        margin: 0 20px; /* 모바일에서는 좌우에 20px를 준다. */ 
+    }
+    #wrap { 
+        min-width: 320px; /* 모바일 최소사이즈 */    
+    }
+}
+
+.header {
+    height: 50px;
+    position: relative;
+}
+.header .gnb .gnb_btn {
+    position: absolute; /*header의 기준*/
+    right: 0;
+    top: 0;
+    z-index: 101;
+    width: 60px;
+    height: 50px;
+    background-color: #7a563c;
+}
+.header .gnb .gnb_btn button {
+    display: none;
+}
+.header .gnb .gnb_btn span {
+    position: absolute;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: 1s;
+}
+.header .gnb .gnb_btn span.bar1 {
+    top: 16px;
+}
+.header .gnb .gnb_btn span.bar2 {
+    top: 23px;
+}
+.header .gnb .gnb_btn span.bar3 {
+    top: 30px;
+}
+.header.menu_open .gnb .gnb_btn span.bar1 {
+    /* top: 23px;
+    transform: rotate(45deg);
+    left: calc(50% - 15px);
+    width: 30px; */
+    animation-name: menu_open1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.header.menu_open .gnb .gnb_btn span.bar2 {
+    opacity: 0;
+}
+.header.menu_open .gnb .gnb_btn span.bar3 {
+    animation-name: menu_open3;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes menu_open1 { /* bar이 열림 -> 닫힘으로 바뀔때 */
+    0% { top: 16px; transform: rotate(0deg); }
+    50% {top: 23px; transform: rotate(0deg);;}
+    100% {top: 23px; transform: rotate(45deg);}
+}
+@keyframes menu_open3 { /* bar이 열림 -> 닫힘으로 바뀔때 */
+    0% { top: 16px; transform: rotate(0deg); }
+    50% {top: 23px; transform: rotate(0deg);;}
+    100% {top: 23px; transform: rotate(-45deg);}
+}
+
+.header .gnb .gnb_wrap {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #7a563c;
+    color: #fff;
+    padding: 50px 30px 20px 30px;
+}
+.header.menu_open .gnb .gnb_wrap {
+    display: block;
+}
+.header .gnb .ul.depth1 {
+    height: calc(100vh - 70ox);
+    overflow-y: auto;
+}
+.header .gnb .ul.depth1 > li > a {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 60px;
+    display: block;
+}
+.header .gnb .ul.depth1 > li > a > span::after {
+    position: absolute;
+    right: -20;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    content: "";
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 14.6617C11.8794 14.6617 11.7672 14.6425 11.6634 14.604C11.5595 14.5656 11.4608 14.4996 11.3672 14.406L6.87301 9.91175C6.73454 9.7733 6.66371 9.59927 6.66051 9.38965C6.65729 9.18003 6.72812 9.00279 6.87301 8.85792C7.01787 8.71306 7.1935 8.64062 7.3999 8.64062C7.6063 8.64062 7.78194 8.71306 7.9268 8.85792L11.9999 12.931L16.073 8.85792C16.2115 8.71947 16.3855 8.64864 16.5951 8.64542C16.8047 8.64222 16.9819 8.71306 17.1268 8.85792C17.2717 9.00279 17.3441 9.17843 17.3441 9.38485C17.3441 9.59125 17.2717 9.76688 17.1268 9.91175L12.6326 14.406C12.539 14.4996 12.4403 14.5656 12.3364 14.604C12.2326 14.6425 12.1204 14.6617 11.9999 14.6617Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.header .gnb .ul.depth2 {
+    display: none;
+}
+.header .gnb .ul.depth1 > li.sup_open > a span::after {
+    transform: rotate(180deg);
+}
