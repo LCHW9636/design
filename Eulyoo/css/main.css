@@ -1020,21 +1020,84 @@ html, body {
 .footer .footer_txt strong {
     font-weight: 700;
 }
-.footer .footer_info {
-
+.footer .footer_info span {
+    font-weight: 400;
 }
+/* 인접 선택자
+footer .footer_info span 다음에 오는 strong태그 
+<div>
+    <span></span>
+    <strong></strong>
+    <span></span>
+    <strong></strong> ------ span태그 다음에 오는 strong
+    <span></span>
+</div>
+    /*/
 .footer .footer_info span + strong {
     margin-top: 57px;
 }
 .footer .footer_info strong {
     display: block;
+    margin: 0 0 17px 0;
 }
 .footer .footer_ingo span {
     display: block;
+}
+.footer .footer_ingo span a{ /*sns 여백*/
+    margin: 0 10px 0 0;
 }
 .footer .copyright {
     position: absolute;
     left: 0;
     bottom: 0;
 }
-
+.footer .copyright img {
+    width: 193px;
+}
+.footer .copyright span {
+    display: block;
+}
+@media screen and (max-width:640px){
+    .footer {
+        padding: 44px 0;
+    }
+    .footer .inner {
+        display: block; /* txt,info 좌우로 배치 해제*/
+    }
+    .footer .footer_txt {
+        font-size: 20px;
+        margin-bottom: 49px;
+    }
+    .footer .footer_txt strong {
+        font-size: 13px;
+    }
+    .footer .footer_info span {
+        font-weight: 400;
+        font-size: 13px;
+    }
+    .footer .footer_info span + strong {
+        margin-top: 38px;
+    }
+    .footer .footer_info strong {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+    .footer .footer_ingo span {
+        display: block;
+    }
+    .footer .footer_ingo span a{ /*sns 여백*/
+        margin: 0 10px 0 0;
+    }
+    .footer .copyright {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin: 64px 0 0 0;
+    }
+    .footer .copyright img {
+        width: 158px;
+    }
+    .footer .copyright span {
+        display: block;
+    }
+}
