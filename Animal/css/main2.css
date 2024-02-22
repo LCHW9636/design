@@ -1,0 +1,360 @@
+@charset "utf-8"; /* 이css문서는 UTF-8방식으로 인코딩 되어 있습니다. */
+@import url(default.css);
+/* 영문웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* 한글웹폰트 */
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamRegular.woff') format('woff'); /* window용 */
+    font-weight:400; 
+    font-style:normal; 
+}
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamRegular.woff2') format('woff2'); /* 맥용 */
+    font-weight:400; 
+    font-style:normal; 
+}
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamExtraBold.woff') format('woff'); 
+    font-weight:700;
+    font-style:normal; 
+}
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamExtraBold.woff2') format('woff2'); 
+    font-weight:700;
+    font-style:normal; 
+}
+
+
+*::selection {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+*::-moz-selection { /* 호환성을 위한 코드 */
+    background-color: #1d1d1d;
+    color: #fff;
+}
+/*
+    영문, 숫자는 영문 폰트를 사용하고 한글만 한국어 폰트를 사용하고 싶을때
+    (단 영문 폰트로 선택한 폰트는 한국어가 지원되는 폰트면 안됨)
+    둘다 폰트파일을 불러오고 (import, font-face)
+    body에서 폰트를 정의할때 맨먼저 무조건 영문폰트를 먼저 선언
+    영어,숫자만 영문폰트가 적용되고 한글을 지원되지 않기때문에 
+    다음에 선언된 한글폰트가 적용됨
+    font-family에 여러폰트를 쓰는 것은 
+    앞에 폰트가 지원안되면 다음폰트, 그게 또 안되면 다음폰트 ....무한반복
+*/
+
+html, body {
+    font-family: 'Montserrat', 'S-CoreDream', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
+    font-size: 15px; /* 크기 */
+    color: #1d1d1d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.25; /* auto */
+    word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 분리해서 줄바꿈 */
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* wrapper의 사이즈 1280 + 40px (좌우여백) = 1320 */
+@media screen and (max-width:1320px){
+    .wrapper { 
+        width: auto; 
+        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨 
+           디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에 
+           그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
+        margin: 0 20px;  
+    }
+}/*media*/
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px;
+    }
+}
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 1000000000000;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #FF1414;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+/* 속성선택자
+a태그중에서 href="#gnb"인 a태그의 스타일 */
+.skipnav a[href="#gnb"] {
+    background-color: #FF9314;
+}
+.skipnav a:focus {
+    top: 100px;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* 왼쪽에 로고, 오른쪽에 검색/바로가기, 가운데 메뉴 배치
+       왼쪽과 오른쪽의 사이즈가 비슷해야 메뉴가 가운데로 감 */
+}
+.header .logo {
+    margin: 23px 0 0 40px;
+    font-size: 0;
+    line-height: 0;
+}
+.header .logo a {
+    width: 180px;
+    height: 55px;
+    display: block;
+    background: url(../images/logo.svg) no-repeat center center / contain;
+}
+.header .gnb .gnb_open, 
+.header .gnb .gnb_close {
+    display: none;
+}
+.header .gnb ul.depth1 {
+    display: flex;
+}
+.header .gnb ul.depth1 > li {
+    position: relative; /* .depth2 정렬의 기준 */
+}
+.header .gnb ul.depth1 > li > a {
+    padding: 0 25px; /* 메뉴사이 여백 */
+    line-height: 100px; /* 메뉴 위아래 가운데 */
+    display: block;
+    font-size: 22px;
+    position: relative; /* after 정렬의 기준 */
+}
+/* has 선택자
+    <li>
+        <a></a>
+        <ul class="depth2"></ul>
+    </li>
+    <li>
+        <a></a>
+    </li>
+    1차 메뉴중에서 2차 메뉴를 가지고 있는 li가 있고
+    2차 메뉴가 없는 li가 있음
+
+    이때 2차 메뉴를 가지고 있는 li만 선택해서 
+    a태그에 스타일을 줄 예정 
+    li:has(.depth2) 라고 선언하면 
+    li의 하위 요소중에서 depth2라는 클래스명을 갖은 
+    li에만 스타일이 적용됨.
+    ----- 단 주의사항 2023년 새로 생김..
+          즉 브라우저가 업데이트가 안된 곳에서는 적용이 안됨
+*/
+.header .gnb ul.depth1 > li:has(.depth2) > a::after {
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 8px);
+    width: 8px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.404 5.864'%3E%3Cpath id='chevron_right_FILL0_wght300_GRAD0_opsz24' d='M350.409-688.564l-3.966-3.967a.706.706,0,0,1-.207-.508.688.688,0,0,1,.207-.518.7.7,0,0,1,.513-.212.7.7,0,0,1,.513.212l4.377,4.377a.808.808,0,0,1,.193.288.935.935,0,0,1,.056.328.937.937,0,0,1-.056.328.807.807,0,0,1-.193.288l-4.377,4.377a.706.706,0,0,1-.508.207.688.688,0,0,1-.518-.207.7.7,0,0,1-.212-.513.7.7,0,0,1,.212-.513Z' transform='translate(-683.365 -346.231) rotate(90)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    content: "";
+}
+.header .gnb ul.depth2 {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 100px; /* a태그의 높이와 동일 */
+    transform: translate(-50%, 0);
+    /* 나의 넓이의 절반을 왼쪽으로 이동 */
+    padding: 33px 20px 10px 20px;
+    /*
+        2차메뉴가 absolute라면 하위메뉴로 이동할때
+        메뉴가 아웃 되는 경우가 있음
+        이문제를 해결하려면 반드시 2차메뉴가 1차메뉴 a와 
+        딱 붙여있어야함. (그 사이에 틈이 있으면 안됨)
+        <a></a>   -- line-height: 100px
+        <ul class="depth2"></ul> top:100px (딱 a만큼)
+        필요한 여백 padding으로 처리 (절대 margin 안됨)
+        만약 backgroud가 필요하면 before로 처리
+    */
+}
+.header .gnb ul.depth2::before {
+    position: absolute;
+    left: 0;
+    top: 13px; /* a와의 여백 */
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 13px);
+    content: "";
+    border-radius: 20px;
+    backdrop-filter: blur(10px) brightness(90%);
+    /* birghtness 100% - 기본, 밝게 100%이상 어둡게 할꺼면 100%이하 */
+}
+.header .gnb ul.depth2 > li > a {
+    display: block;
+    white-space: nowrap; /* 줄바꿈 금지 */
+    line-height: 40px;
+}
+.header .gnb ul.depth2 > li > a:hover {
+    color: #73E59D;
+    font-weight: 700;
+}
+.header .tnb {
+    display: flex;
+    align-items: center;
+    margin: 40px 40px 0 0;
+}
+.header .tnb .search {
+    position: relative; /* before정렬의 기준 */
+    padding-left: 26px;
+    margin-right: 33px;
+}
+.header .tnb .search::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17.768 17.768'%3E%3Cpath id='search_FILL0_wght400_GRAD0_opsz24' d='M126.571-826.858a6.343,6.343,0,0,1-4.663-1.908A6.343,6.343,0,0,1,120-833.429a6.343,6.343,0,0,1,1.908-4.663A6.343,6.343,0,0,1,126.571-840a6.343,6.343,0,0,1,4.663,1.908,6.343,6.343,0,0,1,1.908,4.663,6.162,6.162,0,0,1-.354,2.1,6.024,6.024,0,0,1-.96,1.744l5.661,5.661a.958.958,0,0,1,.278.708.958.958,0,0,1-.278.708.959.959,0,0,1-.708.278.959.959,0,0,1-.708-.278l-5.661-5.661a6.023,6.023,0,0,1-1.744.96A6.162,6.162,0,0,1,126.571-826.858Zm0-2.022a4.387,4.387,0,0,0,3.222-1.327,4.387,4.387,0,0,0,1.327-3.222,4.387,4.387,0,0,0-1.327-3.222,4.387,4.387,0,0,0-3.222-1.327,4.387,4.387,0,0,0-3.222,1.327,4.387,4.387,0,0,0-1.327,3.222,4.387,4.387,0,0,0,1.327,3.222A4.387,4.387,0,0,0,126.571-828.88Z' transform='translate(-120 840)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.header .tnb .paper {
+    padding: 4px 40px 2px 20px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    position: relative; 
+}
+.header .tnb .paper::after {
+    position: absolute;
+    right: 15px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.164 18.164'%3E%3Cpath id='arrow_back_FILL0_wght100_GRAD0_opsz24' d='M225.028-735.777l5.482,5.482a.367.367,0,0,1,.11.232.319.319,0,0,1-.11.257.353.353,0,0,1-.245.122.353.353,0,0,1-.245-.122l-5.8-5.8a.747.747,0,0,1-.171-.245.719.719,0,0,1-.049-.269.718.718,0,0,1,.049-.269.746.746,0,0,1,.171-.245l5.8-5.8a.366.366,0,0,1,.232-.11.318.318,0,0,1,.257.11.353.353,0,0,1,.122.245.353.353,0,0,1-.122.245l-5.482,5.482h11.454a.332.332,0,0,1,.245.1.332.332,0,0,1,.1.245.332.332,0,0,1-.1.245.332.332,0,0,1-.245.1Z' transform='translate(-348.503 -674.356) rotate(135)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@media screen and (min-width:1025px){
+    /* li에 마우스를 올리면 jquery에서 해당 li에 sub_over 클래스 추가 예정 
+    메뉴 오버스타일은 모바일 타입으로 변경될때는 적용 필요없음 
+    1024부터 모바일로 바뀜 1025이상만 이스타일이 적용*/
+    .header.menu_over::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: "";
+        backdrop-filter: blur(10px) brightness(90%);
+    }
+    .header .gnb ul.depth1 > li.sub_over > a {
+        color: #73E59D;
+        font-weight: 700;
+    }
+    .header .gnb ul.depth1 > li.sub_over > a::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.404 5.864'%3E%3Cpath id='chevron_right_FILL0_wght300_GRAD0_opsz24' d='M350.409-688.564l-3.966-3.967a.706.706,0,0,1-.207-.508.688.688,0,0,1,.207-.518.7.7,0,0,1,.513-.212.7.7,0,0,1,.513.212l4.377,4.377a.808.808,0,0,1,.193.288.935.935,0,0,1,.056.328.937.937,0,0,1-.056.328.807.807,0,0,1-.193.288l-4.377,4.377a.706.706,0,0,1-.508.207.688.688,0,0,1-.518-.207.7.7,0,0,1-.212-.513.7.7,0,0,1,.212-.513Z' transform='translate(693.769 352.095) rotate(-90)' fill='%2373e59d'/%3E%3C/svg%3E%0A");
+    }
+    .header .gnb ul.depth1 > li.sub_over > .depth2 {
+        display: block; /* 2차메뉴 보기 */
+    }
+}/* media */
+@media screen and (max-width:1320px){
+    .header .logo {
+        margin-left: 20px;
+    }
+    .header .logo a {
+        width: 125px;
+        height: 38px;
+    }
+    .header .gnb ul.depth1 > li > a {
+        padding: 0 15px;
+        font-size: 18px;
+    }
+    .header .gnb ul.depth1 > li:has(.depth2) > a::after {
+        right: 4px;
+    }
+    .header .tnb {
+        margin-right: 20px;
+    }
+    .header .tnb .search {
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width:1024px){
+    /* 모바일변환 */
+    .header {
+        height: 50px;
+    }
+    .header .logo {
+        margin: 12px 0 0 10px;
+    }
+    .header .logo a {
+        width: 85px;
+        height: 27px;
+    }
+    .header .gnb .gnb_wrap {
+        display: none;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        font-size: 0;
+        line-height: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 13'%3E%3Cg id='그룹_112' data-name='그룹 112' transform='translate(-315.5 -19)'%3E%3Cline id='선_14' data-name='선 14' x2='28' transform='translate(315.5 20.5)' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Cline id='선_15' data-name='선 15' x2='28' transform='translate(315.5 30.5)' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 28px auto;
+        background-position: center center;
+    }
+    .header .tnb .paper {
+        display: none;
+    }
+    .header .tnb {
+        margin: 22px 60px 0 0;
+    }
+    .header .tnb .search {
+        padding-left: 17px;
+        margin-right: 0;
+        /* 글자 삭제 */
+        font-size: 0;
+        line-height: 0;
+    }
+}
+
+.visual {
+    background: url(../images/visual01.png) no-repeat center center / cover;
+    height: 700px;
+}
