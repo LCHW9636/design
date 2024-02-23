@@ -926,6 +926,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     display: flex;
     justify-content: center; /* 좌우의 가운데 */
     align-items: center;
+    font-size: 22px;
 }
 .adopt .ctrl_btn button {
     width: 41px;
@@ -945,35 +946,89 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     line-height: 42px;
     border: 1px solid #fff;
     border-radius: 49px;
-    display: block;
-    font-size: 22px;
+    display: inline-block;
     position: relative;
+    margin-left: 7px;
 }
 .adopt .ctrl_btn .more::after {
     position: absolute;
-    left: 25px;
-    top: 13px;
+    right: 22px;
+    top: 8px;
     width: 22px;
     height: 22px;
-    contain: "";
+    content: "";
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath id='add_FILL0_wght300_GRAD0_opsz24' d='M229.732-727.73H221.27a1.228,1.228,0,0,1-.9-.365A1.229,1.229,0,0,1,220-729a1.227,1.227,0,0,1,.365-.9,1.229,1.229,0,0,1,.9-.365h8.462v-8.461a1.228,1.228,0,0,1,.365-.9A1.229,1.229,0,0,1,231-740a1.227,1.227,0,0,1,.9.365,1.229,1.229,0,0,1,.364.9v8.461h8.462a1.228,1.228,0,0,1,.9.365,1.229,1.229,0,0,1,.365.9,1.227,1.227,0,0,1-.365.9,1.229,1.229,0,0,1-.9.365H232.27v8.462a1.228,1.228,0,0,1-.365.9,1.229,1.229,0,0,1-.9.365,1.227,1.227,0,0,1-.9-.365,1.229,1.229,0,0,1-.365-.9Z' transform='translate(-220.001 739.999)' fill='%23fff'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
-    background-position: center center ;
+    background-position: center center;
     background-size: contain;
     transition: 0.3s;
+}
+.adopt .ctrl_btn .more:hover {
+    background-color: #0A0F27;
+    border-color: #0A0F27;
 }
 .adopt .ctrl_btn .more:hover::after {
     transform: rotate(180deg);
 }
+@media screen and (max-width:1320px){
+    .adopt .list {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+    .adopt .swiper ul li {
+        width: auto;
+    }
+}
+@media screen and (max-width:1024px){
+    .adopt h2 {
+        font-size: 30px;
+        margin: 0 0 40px 0;
+    }
+    .adopt .ctrl_btn {
+        margin: 50px 0 0 0;
+        font-size: 17px;
+    }
+    .adopt .ctrl_btn button.next,
+    .adopt .ctrl_btn button.prev {
+        display: none;
+    }
+    .adopt .ctrl_btn button.stop,
+    .adopt .ctrl_btn button.play {
+        width: 35px;
+        height: 35px;
+        background-size: 16px auto;
+    }
+    .adopt .ctrl_btn .more {
+        padding: 0 60px 0 15px;
+        line-height: 35px;
+        height: 35px;
+    }
+    .adopt .ctrl_btn .more::after {
+        top: 7px;
+        right: 22px;
+        top: 8px;
+        width: 17px;
+        height: 17px;
+    }
+}
+@media screen and (max-width:768px){
+    .adopt h2 {
+        font-size: 25px;
+        margin: 0 0 30px 0;
+    }
+}
 
 .adopt .ctrl_btn .prev {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='18' viewBox='0 0 10 18'%3E%3Cpath id='chevron_left_FILL0_wght300_GRAD0_opsz24' d='M351.8-684.584l6.765,6.862a1.23,1.23,0,0,1,.353.88,1.2,1.2,0,0,1-.353.9,1.183,1.183,0,0,1-.875.366,1.183,1.183,0,0,1-.875-.366l-7.464-7.572a1.4,1.4,0,0,1-.329-.5,1.64,1.64,0,0,1-.1-.567,1.64,1.64,0,0,1,.1-.567,1.4,1.4,0,0,1,.329-.5l7.464-7.572a1.2,1.2,0,0,1,.867-.358,1.166,1.166,0,0,1,.883.358,1.218,1.218,0,0,1,.361.888,1.218,1.218,0,0,1-.361.888Z' transform='translate(-348.924 693.58)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-position-x: 12px;
 }
 .adopt .ctrl_btn .next {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='18' viewBox='0 0 10 18'%3E%3Cpath id='chevron_right_FILL0_wght300_GRAD0_opsz24' d='M353.357-684.765l-6.765-6.862a1.23,1.23,0,0,1-.353-.88,1.2,1.2,0,0,1,.353-.9,1.183,1.183,0,0,1,.875-.366,1.183,1.183,0,0,1,.875.366l7.464,7.572a1.4,1.4,0,0,1,.329.5,1.641,1.641,0,0,1,.1.567,1.642,1.642,0,0,1-.1.567,1.4,1.4,0,0,1-.329.5l-7.464,7.572a1.194,1.194,0,0,1-.867.358,1.165,1.165,0,0,1-.883-.358,1.218,1.218,0,0,1-.361-.888,1.218,1.218,0,0,1,.361-.888Z' transform='translate(-346.231 693.769)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-position-x: 16px;
 }
 .adopt .ctrl_btn .play {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='20' viewBox='0 0 16 20'%3E%3Cpath id='play_arrow_FILL0_wght300_GRAD0_opsz24' d='M340-675.61v-16.62a1.61,1.61,0,0,1,.494-1.215,1.607,1.607,0,0,1,1.152-.476,1.612,1.612,0,0,1,.434.062,1.766,1.766,0,0,1,.434.183l12.737,8.327a1.717,1.717,0,0,1,.562.63,1.726,1.726,0,0,1,.187.8,1.727,1.727,0,0,1-.187.8,1.717,1.717,0,0,1-.562.63l-12.737,8.328a1.766,1.766,0,0,1-.434.183,1.609,1.609,0,0,1-.434.061,1.61,1.61,0,0,1-1.152-.474A1.614,1.614,0,0,1,340-675.61ZM342.732-683.921Zm0,6.265,9.593-6.265-9.593-6.263Z' transform='translate(-340.001 693.921)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-position: calc(50% - -2px);
     display: none;
 }
 .adopt .ctrl_btn .stop {
@@ -1018,7 +1073,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     }
 
 .footer {
-    background-color: #1d1d1d;
+    background-color: #0A0F27;
     color: rgba(255, 255, 255, 0.8);
     padding: 64px 0 113px 0;
 }
