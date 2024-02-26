@@ -99,9 +99,31 @@ $('.adopt .ctrl_btn .play').on('click',function(){
     $('.adopt .ctrl_btn .stop').show()
 })
 
-/*
-    .lost .list > ul > li 클릭하면 li에 active 클래스 추가
-    이전에 active클래스가 있던 li의 avctive는 삭제 
-*/
+/* 관련사이트
+    site_open을 클릭하면 목록이 나타남
+        site_list 목록이 나타남
+        site_open 사라짐
+        site_close 나타남
+    site_close를 클릭하면 목록이 사라짐
+        site_list 목록이 사라짐
+        site_open 나타남
+        site_close 사라짐*/
+
+    $('.footer .familly_site .site_open').on('click',function(){
+        $('footer .familly_site .site_list').slideDown()
+        $(this).hide()
+        $('.footer .familly_site .site_close').show()
+    })
+    $('.footer .familly_site .site_close').on('click',function(){
+        $('footer .familly_site .site_list').slideUp()
+        $(this).hide()
+        $('.footer .familly_site .site_open').show()
+    })
+    /*
+        메뉴열기를 클릭하면 header에 menu_open 추가
+        메뉴닫기를 클릭하면 header에 menu_close가 삭제
+        
+
+    */
 
 }) //$(document).ready
