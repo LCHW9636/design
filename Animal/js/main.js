@@ -122,8 +122,35 @@ $('.adopt .ctrl_btn .play').on('click',function(){
     /*
         메뉴열기를 클릭하면 header에 menu_open 추가
         메뉴닫기를 클릭하면 header에 menu_close가 삭제
-        
-
     */
+   $('.header .gnb .gnb_open').on('click',function(){
+        $('.header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+   })
+   $('.header .gnb .gnb_close').on('click',function(){
+        $('.header').removeClass('menu_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+   })
 
+   /*
+    1차메뉴 a를 클릭하면
+        - a에 href링크 작동안함
+        - depth2는 slidedown으로 나타나게
+        - 클릭한 a의 부모 li에  sub_open 클래스를 추가
+        만약에 이미 열려있는 메뉴라면 닫음.
+        (열린메뉴를 판단하는 기준 - li에 sub_open이 있나 없나)
+        --같은 버튼이 열기/닫기를 동시에 하는 경우
+   */
+    $(".header .gnb ul.depth1 > li:has(.depth2) > a").on("click", function(e){
+        e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+        if($(this).parent().hasClass('sub_open') == true){ //sub_open있다면
+            console.log('sub_open있음')
+            $(this).parent().removeClass('sub_open')
+            $(this).parent().find('ul.depth2').slideUp()
+        }else{
+            console.log('sub_opend없음')
+            $(this).parent().addClass('sub_open')
+            $(this).parent().find('ul.depth2').slideDown()
+        }
+    });
 }) //$(document).ready

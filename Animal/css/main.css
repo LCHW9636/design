@@ -227,7 +227,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         backdrop-filter: blur(10px) brightness(75%);
     }
     .header .gnb ul.depth1 > li.sub_over > a {
-        color: #76CFDD;
+        color: #3d3d3d;
         font-weight: 700;
     }
     .header .gnb ul.depth1 > li.sub_over > a::after {
@@ -250,7 +250,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
 .header .tnb .search::before {
     position: absolute;
     left: 0;
-    top: 0px;
+    top: 0;
     width: 15px;
     height: 15px;
     content: "";
@@ -346,7 +346,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         line-height: 40px;
     }
     .header .gnb ul.depth2 > li > a:hover {
-        color: #76CFDD;
+        color: #3d3d3d;
         font-weight: 700;
     }
     .header .tnb {
@@ -423,7 +423,6 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='close_FILL0_wght300_GRAD0_opsz24' d='M238.231-719.775l-9.6,9.6a1.37,1.37,0,0,1-.988.4,1.336,1.336,0,0,1-1.006-.4,1.357,1.357,0,0,1-.411-1,1.36,1.36,0,0,1,.411-1l9.6-9.595-9.6-9.6a1.373,1.373,0,0,1-.4-.988,1.336,1.336,0,0,1,.4-1,1.356,1.356,0,0,1,1-.411,1.356,1.356,0,0,1,1,.411l9.6,9.595,9.6-9.595a1.371,1.371,0,0,1,.988-.4,1.337,1.337,0,0,1,1.006.4,1.355,1.355,0,0,1,.411,1,1.359,1.359,0,0,1-.411,1l-9.6,9.6,9.6,9.595a1.373,1.373,0,0,1,.4.988,1.336,1.336,0,0,1-.4,1.006,1.359,1.359,0,0,1-1,.411,1.359,1.359,0,0,1-1-.411Z' transform='translate(-226.231 733.769)' fill='%23fff'/%3E%3C/svg%3E%0A");
         z-index: 111;
         background-position: center center;
-        
     }
     .header.menu_open .gnb .gnb_open {
         display: none;
@@ -451,7 +450,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     .header .tnb .search::before {
         width: 24px;
         height: 24px;
-        top: -17px;
+        top: -8px;
         left: -16px;
     }
     .header .gnb .ul.depth1 > li > a {
@@ -459,9 +458,11 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         line-height: 50px;
         padding: 0 20px;
     }
+    .header .gnb ul.depth1 > li.sub_open:has(.depth2) > a span {
+        font-weight: 700;
+    }
     .header .gnb ul.depth1 > li:has(.depth2) > a::after {
         display: none;
-        
     }
     .header .gnb ul.depth1 > li:has(.depth2) > a span {
         position: relative;
@@ -477,6 +478,10 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         background-size: contain;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='7' viewBox='0 0 13 7'%3E%3Cpath id='expand_more_FILL0_wght200_GRAD0_opsz24' d='M282.318-597.769a1.04,1.04,0,0,1-.379-.067,1,1,0,0,1-.34-.234l-5.583-5.593a.642.642,0,0,1-.191-.439.6.6,0,0,1,.191-.463.624.624,0,0,1,.45-.2.624.624,0,0,1,.45.2l5.4,5.412,5.4-5.412a.64.64,0,0,1,.438-.191.594.594,0,0,1,.462.191.626.626,0,0,1,.2.451.626.626,0,0,1-.2.451l-5.583,5.593a1,1,0,0,1-.34.234A1.04,1.04,0,0,1,282.318-597.769Z' transform='translate(-275.824 604.769)' fill='%231d1d1d'/%3E%3C/svg%3E%0A");
         content: "";
+        transition: 0.3s;
+    }
+    .header .gnb ul.depth1 > li.sub_open:has(.depth2) > a span::after {
+        transform: rotate(180deg);
     }
     .header .gnb ul.depth2 {
         display: none;
@@ -491,6 +496,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     .header .gnb ul.depth2::before {
         display: none;
     }
+    
     .header .tnb .paper {
         display: none;
     }
@@ -514,12 +520,14 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     
 }
 @media screen and (max-width:768px){
+    .header .tnb .search::before {
+        top: -32px;
+    }
     .header .gnb .gnb_wrap {
         display: none;
     }
     .header .gnb .gnb_open,
     .header .gnb .gnb_close {
-        display: block;
         position: absolute;
         right: 0;
         top: 0;
@@ -532,9 +540,27 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         background-position: center center;
         background-size: auto 24px;
     }
+    .header .gnb .gnb_close {
+        background-color: #07B8E2;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath id='close_FILL0_wght300_GRAD0_opsz24' d='M238.231-719.775l-9.6,9.6a1.37,1.37,0,0,1-.988.4,1.336,1.336,0,0,1-1.006-.4,1.357,1.357,0,0,1-.411-1,1.36,1.36,0,0,1,.411-1l9.6-9.595-9.6-9.6a1.373,1.373,0,0,1-.4-.988,1.336,1.336,0,0,1,.4-1,1.356,1.356,0,0,1,1-.411,1.356,1.356,0,0,1,1,.411l9.6,9.595,9.6-9.595a1.371,1.371,0,0,1,.988-.4,1.337,1.337,0,0,1,1.006.4,1.355,1.355,0,0,1,.411,1,1.359,1.359,0,0,1-.411,1l-9.6,9.6,9.6,9.595a1.373,1.373,0,0,1,.4.988,1.336,1.336,0,0,1-.4,1.006,1.359,1.359,0,0,1-1,.411,1.359,1.359,0,0,1-1-.411Z' transform='translate(-226.231 733.769)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        z-index: 111;
+        background-position: center center;
+    }
     .header .gnb ul.depth1 {
         margin: 50px 0 0 0;
         height: calc(100vh - 50px);
+    }
+    .header .gnb ul.depth2 {
+        display: none;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: translate(0, 0);
+        padding: 10px 20px 10px 40px;
+        background-color: #f4f4f4;
+    }
+    .header .gnb ul.depth2::before {
+        display: none;
     }
     .header.menu_open .tnb .paper {
         left: -9px;
@@ -692,6 +718,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
 }
 
 .lost {
+    position: relative;
     background-color: #0A0F27;
     color: #fff;
     padding-bottom: 80px;
@@ -898,8 +925,25 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     }
 }
 
+.msg .slogan {
+    position: absolute;
+    left: 10%;
+    top: -103px;
+    z-index: 10;
+    mix-blend-mode: difference; /* 배경이 극명하게 차이나게 보일 수 있도록 색상전환 */
+    animation: slogan_rotate; 
+    animation-duration:8s; 
+    animation-timing-function:linear; 
+    animation-iteration-count:infinite;
+}
+@keyframes slogan_rotate {
+    0% { transform:rotate(0) }
+    100% { transform:rotate(360deg) } /* 글자가 움직여서 처음과 동일한 위치가 되는 값 (동일한 문장을 여러번 쓰기 때문에 3-4번째 문장이 다시 시작하는 위치로 하면 됨) */
+}
 .msg {
-    margin: 107px 0;
+    background-color: #fff;
+    position: relative; /* slogan 정렬의 기준 */
+    padding: 107px 0;
 }
 .msg h2 {
     display: none;
@@ -956,6 +1000,9 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     }
 }
 @media screen and (max-width:1024px){
+    .msg .slogan {
+        display: none;
+    }
     .msg p {
         font-size: 25px;
     }
