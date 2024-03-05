@@ -173,4 +173,6 @@
     .service .tit p { font-size: 17px;}
     .service .tit {margin: 47px 0 20px 0;}
     .service .tit p {font-size: 20px;}
+    .service .list ul li strong {font-size: 15px;}
+    
 }

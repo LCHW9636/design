@@ -4,3 +4,106 @@
     작성일 : 2024.02.28
     설명   : 모든 콘텐츠 페이지별 디자인 스타일 저장
 */
+@import url(default.css);
+@import url(common.css);
+@import url(layout.css);
+
+/* ceo인사말 - 회사소개 */
+.cts_greeting2 {
+    margin: 70px 0 273px 0;
+    position: relative;
+}
+.cts_greeting2 .tit {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 0 0 60px 0;
+}
+.cts_greeting2 strong {
+    color: #ED2123;
+    font-weight: 700;
+}
+.cts_greeting2 p {
+    margin: 0 600px 0 0;
+}
+.cts_greeting2 p strong {
+    font-weight: 700;
+    color:#ED2123
+}
+.cts_greeting2 p span {
+    color: #ED2123;
+}
+.cts_greeting2 .ceo strong {
+    color: #1d1d1d;
+    font-size: 20px;
+}
+.cts_greeting2 .ceo {
+    position: absolute;
+    left: calc(50% + 268px);
+    top: -10px;
+}
+.cts_greeting2 .ceo .sign {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.cts_greeting2 .ceo .sign strong {
+    display: block;
+    margin: 10px 30px 0 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+.cts_greeting2 .sign2 {
+    display: none;
+}
+@media screen and (max-width:1320px){
+    .cts_greeting2 p {
+        margin: 0 400px 0 0;
+    }
+    
+    .cts_greeting2 .ceo img {
+        width: 220px;
+        height: auto;
+        object-fit: cover;
+    }
+    .cts_greeting2 .ceo .sign img {
+        width: 120px;
+        height: auto;
+        object-fit: cover;
+    }
+}
+@media screen and (max-width:1024px){
+    .cts_greeting2 p {
+        margin: 0;
+    }
+    .cts_greeting2 .ceo {
+        position: absolute;
+        left: auto;
+        right: calc(10% - 185px);
+        top: 105%;
+        z-index: -1;
+    }
+    .cts_greeting2 .ceo img {
+        width: 220px;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .cts_greeting2 .sign2 {
+        display: block;
+        color: #1d1d1d;
+    }
+    .cts_greeting2 .ceo .sign img {
+        width: 120px;
+        height: auto;
+        object-fit: cover;
+    }
+    .cts_greeting2 .tit br.m_no {
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+
+}
