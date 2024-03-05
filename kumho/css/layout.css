@@ -160,12 +160,9 @@
     }
     .header.menu_over .tnb .link {
         color: #fff;
-        border-color: #E40000;
+        border-color: none;
         background-color: #E40000;
     }
-    .header .gnb ul.depth2 > li > a:hover,
-    .header .gnb ul.depth2 > li.on > a
-}
     /****** 메뉴에 오버했을때 -- END ********/
 /******** 메뉴가 상단에 고정되었을때 -- START ********/
 .header.fixed {
@@ -177,7 +174,7 @@
 }
 .header.fixed .tnb .link {
     color: #fff;
-    border-color: #E40000;
+    border-color: none;
     background-color: #E40000;
 }
 /******** 메뉴가 상단에 고정되었을때 -- END ********/
