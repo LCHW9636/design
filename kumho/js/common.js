@@ -66,7 +66,6 @@ $(document).ready(function(){
     })
 
     /************
-     집에가고싶다!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      모바일 메뉴
      1차 메뉴 a를 클릭하면 a링크를 작동이 안되어야 하고 하위메뉴를 열어줘야함.
     ****************************/
@@ -86,5 +85,15 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
     
-
+    /*************************************************************************
+     footer에 그룹사 바로가기 열기/닫기
+     .footer .family_site .open을 클릭하면 family_site에 on클래스 추가
+     .footer .family_site .close를 클릭하면 family_site에 on클래스 삭제
+     **************************************************************************/
+    $('.footer .family_site .open').on('click', function(){
+        $('.footer .family_site').addClass('on')
+    })
+    $('.footer .family_site .close').on('click', function(){
+        $('.footer .family_site').removeClass('on')
+    })
 }) //$(document).ready

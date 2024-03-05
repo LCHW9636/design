@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
+    <!-- swiper라이브러리 삽입 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="skipnav">
@@ -106,12 +110,134 @@
                 </div>
         </header>
         <div class="container">
-            <section class="visual"></section>
-            <section class="biz"></section>
-            <section class="news"></section>
+            <section class="visual">
+                <h2>팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide">
+                            <img src="images/main/visual1.png" alt="마을풍경">
+                            <div class="visual_txt">
+                                <strong>KUMHO E&C<br>THINK OF THE<br>PEOPLE AND NATURE</strong>
+                                <span>금호건설은 아름다운 미래를 건설합니다.</span>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        <li class="swiper-slide">
+                            <img src="images/main/visual2.png" alt="집">
+                            <div class="visual_txt">
+                                <strong>KUMHO E&C<br>THINK OF THE<br>PEOPLE AND NATURE</strong>
+                                <span>금호건설은 아름다운 미래를 건설합니다.</span>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                    </ul>
+                    <div class="btn_ctrl">
+                        <button class="prev">이전팝업보기</button>
+                        <button class="next">다음팝업보기</button>
+                        <button class="stop">일시정지</button>
+                        <button class="play">재생</button>
+                    </div>
+                </div>
+            </section>
+            <section class="biz">
+                <div class="tit">
+                    <div class="wrapper">
+                        <h2><span>사업분야</span></h2>
+                        <p>세계로 뻗어가는 건설 한류의 중심에 <br>금호건설이 있습니다.</p>
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <!-- 하나의 li에 마우스를 오버하면 오버한 li에는 on클래스 추가
+                            나머지 모든 li에는 off 클래스 추가 -->
+                        <li class="biz01">
+                            <a href="contents/biz01.html">
+                                <strong>건축사업 <span>Architecture</span></strong>
+                               <em>빌딩 개발에서 도시개발로 이어지는 금호건설의 건축사업</em>
+                            </a>
+                        </li>
+                        <li class="biz02">
+                            <a href="contents/biz02.html">
+                                <strong>토목사업<span>Civil</span></strong>
+                                <em>도시와 국토를 잇는 공간 예술, 금호건설의 토목사업</em>
+                            </a>
+                        </li>
+                        <li class="biz03">
+                            <a href="contents/biz03.html">
+                                <strong>주택사업<span>Housing</span></strong>
+                                <em>전국 곳곳에서 신주거단지 조성으로 고객의 높은 신뢰를 얻어온 금호</em>
+                            </a>
+                        </li>
+                        <li class="biz04">
+                            <a href="contents/biz04.html">
+                                <strong>플랜트/환경사업<span>Plant Environment</span></strong>
+                                <em>산업발전의 기틀을 다지는 환경경영을 실천하는 환경/플랜트산업</em>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="news">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2><span>금호뉴스</span></h2>
+                        <p>고객과 함께 아름다운 미래로 비상하는 <br>금호건설입니다.</p>
+                    </div>
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper"> 
+                                <li class="swiper-slide">
+                                    <a href="contents/news.html">
+                                    <span class="date">2024.01.19</span>
+                                    <h3>금호건설, 펄벅재단에 기부금 전달…다문화가정 후원</h3>
+                                    <span class="photo"><img src="images/main/news01.png" alt="후원 기념 사진"></span>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="contents/news.html">
+                                    <span class="date">2023.12.22</span>
+                                    <h3>금호건설, 소외 이웃에 겨울 동계 점퍼 111벌 기부</h3>
+                                    <span class="photo"><img src="images/main/news02.png" alt="점퍼 기부 사진"></span>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="contents/news.html">
+                                    <span class="date">2023.12.20</span>
+                                    <h3>금호건설, '월곶~판교 복선전철 제9공구 공사' 수주</h3>
+                                    <span class="photo"><img src="images/main/news03.png" alt="공사 수주 지도 사진"></span>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
+                        <div class="more"><a href="contents/news.html">VIEW MORE</a></div>
+                    </div>
+                </div>
+            </section>
             <section class="service"></section>
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="wrapper">
+                <!-- 그룹사 바로가기를 클릭하면 family_site에 on클래스를 추가
+                    open버튼 사라짐, close버튼 나타남, ul리스트 나타남 -->
+                <div class="family_site">
+                    <button class="open" title="열기">그룹사 바로가기</button>
+                    <ul>
+                        <li><a href="https://www.kumhobuslines.co.kr/fr/main/main" target="_blank" title="새창링크">금호고속</a></li>
+                        <li><a href="http://www.kumhoarts.com/" target="_blank" title="새창링크">금호문화재단</a></li>
+                        <li><a href="https://flyasiana.com/C/KR/KO/index" target="_blank" title="새창링크">아시아나 항공</a></li>                        
+                        <li><a href="https://www.asianasabre.co.kr/" target="_blank" title="새창링크">아시아나 세이버</a></li>
+                    </ul>
+                    <button class="close" title="닫기">그룹사 바로가기</button>
+                </div>
+                <div class="footer_nav">
+                    <ul>
+                        <li><a href="#n">고객센터</a></li>
+                        <li><a href="#n">OB사랑방</a></li>
+                        <li><a href="#n">contact us</a></li>
+                        <li><a href="#n">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">CopyRight ⓒ Kumho E&C All Right Reserved</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
