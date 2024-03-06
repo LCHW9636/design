@@ -104,6 +104,302 @@
         display: none;
     }
 }
-@media screen and (max-width:768px){
 
+/* 연혁 - 회사소개 */
+.cts_history{
+    margin: 25px 0 60px 0;
+}
+/* 
+    <div class="year10" left></div>
+    <div class="year10" right></div>
+    이렇게 두개가 있는 경우 위 left의 하단 여백과
+    right의 상단 여백은 중복해서 들어가지 않고 둘 중에 제일 큰 여백만 들어간다
+    ----margin은 위 아래 여백이 부딪히는 경우 둘중 큰값만 적용됨
+*/
+.cts_history .year10 {
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cts_history .year10.right {
+    flex-direction: row-reverse;
+    /* text-align: right; */
+}
+.cts_history .year_tit {
+    width: 408px;
+}
+.cts_history .year_tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 20px 0;
+}
+.cts_history .right .year_tit h2 {
+    text-align: right;
+}
+.cts_history .year_tit img {
+    border-radius: 20px;
+    width: 100%;
+}
+.cts_history .year_cnt {
+    width: calc(100% - 517px);
+    position: relative;
+}
+.cts_history .year_cnt::before {
+    position: absolute;
+    left: 96px;
+    top: 7px;
+    width: 1px;
+    height: calc(100% - 7px);
+    background-color: #ED2123;
+    content: "";
+    /* top으로 밀어준 만큼 빼고 선을 그리기 위해
+    그냥 100%주면 top으로 밀어준 만큼 하단으로 밀림*/
+}
+.cts_history .right .year_cnt::before {
+    left: auto;
+    right: 96px;
+}
+/* 긴 중간선의 마지막 꼬리 를 흰색으로 덧칠 */
+.cts_history .year_cnt .year1_group:last-child dl dd:last-child {
+    position: relative;
+}
+.cts_history .year_cnt .year1_group:last-child dl dd:last-child::before {
+    position: absolute;
+    left: -79px;
+    bottom: -20px;
+    width: 1px;
+    height: calc(100% + 10px);
+    background-color: #fff;
+    content: "";
+}
+.cts_history .right .year_cnt .year1_group:last-child dl dd:last-child::before {
+    left: auto;
+    right: -69px;
+}
+.cts_history .year_cnt .year1_group {
+    margin: 0 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.cts_history .year_cnt .year1_group:last-child {
+    margin-bottom: 0;
+}
+.cts_history .right .year_cnt .year1_group {
+    flex-direction: row-reverse; /* 콘텐츠 순서 변경 */
+}
+.cts_history .year_cnt .year1_group h3 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ED2123;
+    line-height: 1;
+    margin-top: -10px;
+}
+.cts_history .year_cnt .year1_group dl {
+    width: calc(100% - 115px);
+
+}
+.cts_history .year_cnt .year1_group dl dt {
+    float: left;
+    /* 뒤에 dd태그는 dt가 없는 것을로 인식*/
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1;
+    margin-top: -2px;
+    position: relative;
+}
+.cts_history .year_cnt .year1_group dl dt::before {
+    position: absolute;
+    left: -22px;
+    top: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: #ED2123;
+    content: "";
+}
+.cts_history .right .year_cnt .year1_group dl dt::before {
+    left: auto;
+    right: -22px;
+}
+.cts_history .right .year_cnt .year1_group dl dt {
+    float: right;
+}
+.cts_history .year_cnt .year1_group dl dd {
+    display: block;
+    margin: 0 0 20px 60px;
+    /* 왼쪽에 dt가 들어갈 자리를 반드시 margin으로 여백 줌*/
+}
+.cts_history .right .year_cnt .year1_group dl dd {
+    margin: 0 50px 20px 0;
+    text-align: right;
+}
+/* 만약 dd태그가 두 번 연속으로 나오는 경우 두번째 dd의 경우 */
+.cts_history .year_cnt .year1_group dl dd + dd {
+    margin-top: -7px
+}
+@media screen and (max-width:1320px){
+    .cts_history .year_tit {
+        width: 330px;
+    }
+    .cts_history .year_tit h2 {
+        font-size: 40px;
+    }
+    .cts_history .year_cnt {
+        width: calc(100% - 400px);
+        position: relative;
+    }
+    .cts_history .year_cnt ..year1_group h3 {
+        font-size: 30px;
+        margin-top: -5px;
+    }
+    .cts_history .year_cnt .year1_group dl dt {
+        font-size: 17px;
+        margin-top: 0;
+    }
+    .cts_history .year_cnt .year1_group dl dd {
+        margin: 0px 19px 20px 37px;
+    }
+    .cts_history .right .year_cnt .year1_group dl dd {
+        margin: 0px 37px 20px 0;
+    }
+}
+@media screen and (max-width:1024px){
+    .cts_history {
+        margin: -30px 0 -30px 0;
+    }
+    .cts_history .year10 {
+        display: block;
+    }
+    .cts_history .year_tit {
+        width: auto;
+    }
+    .cts_history .year_tit h2 {
+        font-size: 30px;
+       margin-bottom: 50px;
+    }
+    .cts_history .year_cnt {
+        width: auto;
+    }
+    .cts_history .year_cnt .year1_group dl dt {
+        float: none;
+    }
+    .cts_history .year_cnt::before {
+        left: 0;
+    }
+    .cts_history .year_cnt .year1_group {
+        display: flex;
+        margin: 0 0 0 -96px;
+    }
+    .cts_history .right .year_cnt::before {
+        left: 0;
+    }
+    .cts_history .year_tit img {
+        display: none;
+    }
+    .cts_history .year10.right {
+        flex-direction: row;    
+    }
+    .cts_history .year_cnt .year1_group h3 {
+        font-size: 20px;
+        margin: -26px 0 -30px 50px;
+    }
+    .cts_history .right .year_tit h2 {
+        text-align: left;
+    }
+    .cts_history .right .year_cnt .year1_group:last-child dl dd:last-child::before {
+        left: -69px;
+    }
+    .cts_history .right .year_cnt .year1_group {
+        flex-direction: row; /* 콘텐츠 순서 변경 */
+    }
+    .cts_history .right .year_cnt .year1_group dl dt::before {
+        left: -22px;
+    }
+    .cts_history .right .year_cnt .year1_group dl dd {
+        margin: 0 20px 50px 0;
+        text-align: left;
+    }    
+}
+
+.cts_ir03 {
+    margin: 95px 0 150px 0;
+}
+.cts_ir03 h2 {
+    color: #1d1d1d;
+    font-size: 35px;
+    font-weight: 700;
+}
+.cts_ir03 p {
+    color: #1d1d1d;
+    font-size: 20px;
+    margin: 10px 0 40px 0;
+}
+.cts_ir03 caption {
+    display: none;
+}
+.cts_ir03 .table_wrap {
+    overflow-y: auto;
+    /* 모바일에서 테이블이 다 안보일때 좌우로 스크롤 */
+}
+.cts_ir03 .table_wrap table {
+    width: 100%;
+    border-collapse: collapse;
+/* table 에서만 적용됨. 각th, td 칸에 border가 들어가 있는데 중간 사이가 중복돼서 선이 2중으로 보이는걸 병합해줌*/
+    border-top: 3px solid #ED2123;
+}
+.cts_ir03 .table_wrap table th,
+.cts_ir03 .table_wrap table td {
+    border: 1px solid #ccc;
+} 
+.cts_ir03 .table_wrap table th:first-child,
+.cts_ir03 .table_wrap table td:first-child {
+    border-left: 0;
+}
+.cts_ir03 .table_wrap table th:last-child,
+.cts_ir03 .table_wrap table td:last-child {
+    border-right: 0;
+}
+.cts_ir03 .table_wrap table tbody th,
+.cts_ir03 .table_wrap table tbody td {
+    padding: 10px 20px;
+}
+.cts_ir03 .table_wrap table thead th,
+.cts_ir03 .table_wrap table thead td {
+    background-color: #f4f4f4;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 20px;
+}
+.cts_ir03 .table_wrap table td {
+    text-align: right;
+}
+.cts_ir03 .table_wrap table th {
+    text-align: right;
+}
+.cts_ir03 .table_wrap table th:first-child {
+    text-align: left;
+}
+@media screen and (max-width:768px){
+    .cts_ir03 {
+        margin: 50px 0 70px 0;
+    }
+    .cts_ir03 h2 {
+        font-size: 20px;
+    }
+    .cts_ir03 p {
+        font-size: 17px;
+        margin: 5px 0 20px 0;
+    }
+    .cts_ir03 .table_wrap table tbody th,
+    .cts_ir03 .table_wrap table tbody td {
+    padding: 5px 10px;
+    }
+    .cts_ir03 .table_wrap table thead th,
+    .cts_ir03 .table_wrap table thead td {
+    font-size: 17px;
+}
 }
