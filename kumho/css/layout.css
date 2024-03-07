@@ -563,6 +563,7 @@
     font-size: 30px;
     margin: 0 36px;
     position: relative;
+    white-space: nowrap;
 }
 .lnb ul li.on a {
     position: relative;
