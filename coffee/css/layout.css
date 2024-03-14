@@ -1,7 +1,168 @@
-/*
-    파일명 : layout.css
-    작성자 : 이찬우
-    작성일 : 2024.02.28
-    설명   : 모든 페이지의 레이아웃 요소 (header.footer/서브레이아웃)
-            메뉴명, sub_visual 이미지 스타일, 탭메뉴
-*/
+header {
+    position: fixed; /* 상단에 고정 */
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #ede8e3;
+}
+header .head_top {
+    height: 77px;
+}
+header .head_sub {
+    height: 73px;
+}
+header .logo {
+    position: absolute; /* header를 기준으로 정렬 */
+    left: 50%;
+    top: 15px;
+    transform: translate(-50%, 0);
+    /*
+        가운데 정렬을 absolute로 해야하고 넓이가 변경될 수도 있음
+        left: calc(50% - 넓이반) 으로 가운데정렬을 하면
+        넓이가 변경되면 계속 값을 변경해야함
+        넓이가 변경되더라도 계속 가운데
+        left: 50% ---- 나의 정렬기준에서 가운데
+        transform: translate(-50%, 0)  -- 나 자신 사이즈의 절반을 왼쪽으로 이동
+    */
+}
+header .logo a {
+    display: block;
+    width: 95px;
+    height: 63px;
+    background: url(../images/common/logo.svg) no-repeat center center / contain;
+    font-size: 0;
+    line-height: 0;
+}
+header .tnb1 {
+    float: left;
+    margin: 20px 0 0 82px;
+}
+header .tnb2 {
+    float: right;
+    margin: 20px 82px 0 0;
+}
+header .tnb1 ul,
+header .tnb2 ul {
+    display: flex;
+}
+header .tnb1 ul li,
+header .tnb2 ul li {
+    margin-right: 35px;
+    position: relative; /* after 정렬의 기준 */
+    font-size: 15px;
+}
+header .tnb1 ul li:last-child,
+header .tnb2 ul li:last-child {
+    margin-right: 0;
+}
+header .tnb1 ul li::after,
+header .tnb2 ul li::after {
+    position: absolute; /* li를 기준으로 정렬 */
+    right: -20px;
+    top: 7px;
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background-color: #bfbbb7;
+    content: "";
+}
+header .tnb1 ul li:last-child:after,
+header .tnb2 ul li:last-child:after {
+    display: none;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /*숨김*/
+}
+header .gnb .depth1 {
+    display: flex;
+    text-align: center;
+}
+header .gnb .depth1 > li {
+    width: 16.66%;
+}
+header .gnb .depth1 > li > a {
+    display: block;
+    line-height: 73px;
+    font-size: 22px;
+    font-weight: 900;
+    white-space: nowrap; /* 무조건 한줄 */
+}
+header .gnb .depth2 {
+    padding: 15px 0 0 0; 
+    /* 오버해서 나타나는 메뉴는 여백을 padding으로 줘야 out되지 않음 */
+    display: none;
+}
+header .gnb .depth2 > li > a {
+    display: block;
+    line-height: 40px;
+    font-size: 20px;
+    white-space: nowrap; /* 무조건 한줄 */
+}
+@media screen and (max-width:1640px){
+    header .tnb1 {
+        margin-left: 0;
+    }
+    header .tnb2 {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width:1320px){
+    header .gnb .depth1 > li > a {
+        font-size: 20px;
+    }
+    header .gnb .depth2 > li > a {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:1024px){
+
+}
+
+
+/* 메뉴오버 */
+@media screen and (min-width:1025px){ /* 1025px이상 */
+    header.menu_over::before {
+        position: absolute; /* header를 기준으로 정렬 */
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 490px;
+        background-color: #ede8e3;
+        content: "";
+    }
+    header.menu_over::after {
+        position: absolute;
+        left: 0;
+        top: 150px;
+        width: 100%;
+        height: 1px;
+        background-color: #bfbbb7;
+        content: "";
+    }
+    header.menu_over .gnb .depth2 {
+        display: block;
+    }
+    header .gnb .depth1 > li.on > a {
+        color: #E80A4D;
+    }
+    header .gnb .depth1 > li.on > a span {
+        position: relative;
+    }
+    header .gnb .depth1 > li.on > a span::after {
+        position: absolute;
+        left: -5px;
+        bottom: -27px;
+        z-index: 1;
+        width: calc(100% + 10px)%;
+        height: 4px;
+        background-color: #E80A4D;
+        content: "";
+    }
+    header .gnb .depth2 > li > a:hover {
+        font-weight: 700;
+        color: #E80A4D;
+    }
+}
