@@ -10,6 +10,16 @@
 .container {
     margin-top: 150px; /* header의 높이만큼 */
 }
+@media screen and (max-width:1024px){
+    .container {
+        margin-top: 100px; /* header의 높이만큼 */
+    }
+}
+@media screen and (max-width:768px){
+    .container {
+        margin-top: 50px; /* header의 높이만큼 */
+    }
+}
 .visual .swiper { 
     
 } /* 팝업의 높이가 됨 */
@@ -56,4 +66,284 @@
     .visual .swiper-slide img.popup_m {
         display: block;
     }
+}
+
+.product {
+    margin: 125px 0 160px 0;
+}
+.product h2 {
+    font-family: 'Bright', serif;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.product .list ul {
+    align-items: flex-end;
+}
+.product .list ul li a {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 0 0 50px 0;
+}
+.product .list ul li a::before {
+    position: absolute;
+    left: 5px;
+    bottom: 7px;
+    z-index: -1;
+    width: calc(100% - 12px);
+    height: 260px;
+    background-color: #fff;
+    border-radius: 40px;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+    content: "";
+}
+.product .list ul li a .photo {
+    display: block;
+    height: 304px;
+}
+.product .list ul li a .photo img {
+    width: 220px;
+    max-width: 90%;
+}
+.product .list ul li a .tit {
+    display: block;
+    font-size: 20px;
+    margin: 5px 0 10px 0;
+}
+.product .list ul li a .name {
+    display: block;
+    font-size: 15px;
+    color: #987346;
+}
+.product .list ul li a .info {
+    display: block;
+    font-size: 15px;
+    margin: 0 35px;
+}
+.product .list ul li a .info span + span {
+    /*
+    <span class="info">
+        <span></span>
+        <span></span> ------ 해당사항 없음
+        <span></span> ------ 적용됨
+        <span></span> ------ 적용됨
+    </span>
+    */
+}
+
+/* 왼쪽요소 -active */
+.product .list ul li.swiper-slide-active a::before {
+    height: 295px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(-45deg, #876f53, #b29574);
+}
+.product .list ul li.swiper-slide-active a,
+.product .list ul li.swiper-slide-active a .name  {
+    color: #fff;
+}
+.product .list ul li.swiper-slide-active a .tit {
+    font-weight: 700;
+}
+.product .list ul li.swiper-slide-active a .photo img {
+    width: 246px;
+    transition: 0.1s;
+
+}
+@media screen and (max-width:1024px){
+    .product .list ul li a .photo img {
+        margin-top: 20px;
+    }
+    .product .list ul li.swiper-slide-active a .photo img {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:768px){
+    .product .list ul li {
+        width: 290px;
+    }
+    .product .list ul li a .photo img {
+        margin-top: 0;
+    }
+    .product .list ul li a .name {
+        margin: 0 30px 10px 30px;
+    }
+    .product .list ul li a .tit {
+        margin: 0 30px;
+    }
+    .product .list ul li a .info {
+        display: none;
+    }
+}
+
+
+.brand {
+    position: relative; /* photo 정렬의 중심 */
+    background-color: #FFF4E6;
+    height: 651px;
+}
+.brand .photo {
+    position: absolute;
+    left: calc(50% - 55px);
+    top: 0;
+    height: 651px;
+    width: calc(50% + 55px);
+    overflow: hidden;
+    border-radius: 350px 0 0 350px;
+}
+.brand .photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.brand .inner {
+    width: 552px;
+    padding: 86px 0 0 0;
+}
+.brand h2 {
+    font-family: 'Bright', serif;
+    font-size: 2.941rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 34px;
+}
+.brand .list ul {
+    display: flex;
+    margin: 60px 0 0 0;
+}
+.brand .list ul li {
+    margin-right: 25px;
+    text-align: center;
+}
+.brand .list ul li strong {
+    margin-top: 10px;
+    font-size: 0.882rem;
+    display: block;
+}
+@media screen and (max-width:1640px){
+    .brand .photo {
+        left: auto;
+        right: 0;
+        width: calc(100% - 570px)
+    }
+}
+@media screen and (max-width:768px){ 
+    .brand .photo {
+        border-radius: 280px 0 0 280px
+    }
+}
+@media screen and (max-width:768px){ 
+    .brand {
+        height: auto;
+    }
+    .brand .inner {
+        width: auto;
+        padding: 80px 0 0 0;
+        position: relative; /* 이미지 위에 글자가 올라오게 하도록*/
+        z-index: 10;
+        color: #fff;
+    }
+    .brand .photo { /* 이미지를 바닥에 깔기 */
+        width: 100%;
+        height: 105%;
+        border-radius: 0;
+    }
+    .brand .photo::before { /* 이미지에 색 추가 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1d1d1d;
+        opacity: 0.7;
+        content: "";
+    }
+    .brand .list ul {
+        flex-wrap: wrap;    
+        
+    }
+    .brand .list ul li {
+        width: 45%;
+        margin-right: auto;
+        margin: 2.5%;
+        padding: 25px 20px;
+        border-radius: 30px;
+        background-color: #fff;
+        color: #1d1d1d;
+    }
+
+    
+}
+
+.social {
+    margin: 190px 0 110px 0 ;
+}
+
+.social h2 {
+    font-family: 'Bright', serif;
+    font-size: 2.941rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 34px;
+    text-align: center;
+}
+.social .sns ul {
+    display: flex;
+    justify-content: center;
+}
+.social .sns ul li {
+    display: block;
+    margin: 0 10px;
+}
+.social .sns ul li  {
+    display: block;
+}
+.social .sns ul li a {
+    display: block;
+    color: #876f53;
+    position: relative;
+}
+.social .sns ul li a::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #876f53;
+    opacity: 0.5;
+    content: "";
+}
+.social .list {
+    margin: 50px 0 0 0;
+}
+.social .list ul li a {
+    display: block;
+}
+.social .list ul li a .photo {
+    position: relative; /* cate 정렬의 기준 */
+}
+.social .list ul li a .photo img {
+    width: 100%;
+}
+.social .list ul li a .cate {
+    position: absolute;
+    left: 10px;
+    bottom: -20px;
+}
+.social .list ul li a strong {
+    display: block;
+    margin: 10px 0 0 0;
+    text-align: right;
+}
+@media screen and (max-width:768px){ 
+    .m_skip {
+        display: none;
+    }
+}
+
+footer {
+    height: 1000px;
 }
