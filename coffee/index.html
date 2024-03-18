@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- AOS를 작동시키기 위한 css와 js파일 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
     <title>Paul Bassett</title>
@@ -127,8 +130,8 @@
             </section>
             <section class="product">
                 <div class="wrapper">
-                    <h2>MD'S PICK</h2>
-                    <div class="list">
+                    <h2 data-aos="fade-up">MD'S PICK</h2>
+                    <div class="list" data-aos="fade-up">
                         <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
                             <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
                                 <li class="swiper-slide">
@@ -212,7 +215,7 @@
                     </div>
                 </div>
             </section>
-            <section class="brand">
+            <section class="brand" data-aos="fade-left">
                 <div class="wrapper">
                     <div class="photo"><img src="images/main/brand.png" alt="로스팅사진"></div>
                     <div class="inner">
@@ -223,19 +226,19 @@
                             1% 이하로 구현하는 철저한 생산관리 시스템 아래 관리되고 있습니다.</p>
                             <div class="list">
                                 <ul>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-delay="100">
                                         <img src="images/main/ico1.png" alt="원두아이콘">
                                         <strong>스페셜티<br>생두 셀렉션</strong>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-delay="200">
                                         <img src="images/main/ico2.png" alt="모카포트아이콘">
                                         <strong>국내 로스팅 및 철저한<br>생산관리 시스템</strong>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-delay="300">
                                         <img src="images/main/ico3.png" alt="커피아이콘">
                                         <strong>생두의 철저한<br>항온 항습 관리</strong>
                                     </li>
-                                    <li>
+                                    <li data-aos="fade-up" data-aos-delay="400">
                                         <img src="images/main/ico4.png" alt="핸드드립아이콘">
                                         <strong>시그니처 블렌드의<br>다양한 맛과 향</strong>
                                     </li>
@@ -255,85 +258,131 @@
                         </ul>
                     </div>
                     <div class="list">
-                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
-                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo">
-                                            <img src="images/main/social01.png" alt="유튜브 썸네일 SPRING FLAVORS 2024.02.29 COMMING SOON">
-                                            <span class="cate"><img src="images/main/social_facebook.png" alt="페이스북"></span>
-                                        </span>
-
-                                        <strong>𝐏𝐚𝐮𝐥 𝐁𝐚𝐬𝐬𝐞𝐭𝐭 𝐒𝐏𝐑𝐈𝐍𝐆 𝐅𝐋𝐀𝐕𝐎𝐑𝐒</strong>
-                                    </a>
-                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo">
-                                            <img src="images/main/social02.png" alt="paul bassett 베이글, 커피 사진">
-                                            <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
-                                        </span>
-                                        <strong>폴 바셋 제주 커피 추출 행사</strong>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo">
-                                            <img src="images/main/social03.png" alt="SPRING FLAVORS 2024.02.29 COMMING SOON">
-                                            <span class="cate"><img src="images/main/socual_insta.png" alt="인스타그램"></span>
-                                        </span>
-                                        <strong>Good morning!</strong>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo">
-                                            <img src="images/main/social04.png" alt="Lungo 폴 바셋 커피는 왜 맛있을까? COMMING SOON">
-                                            <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
-                                        </span>
-                                        <strong>폴 바셋 커피는 왜 맛있을까?</strong>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo"><img src="images/main/social05.png" alt="케이크 사진"></span>
-                                        <strong>𝐏𝐚𝐮𝐥𝐛𝐚𝐬𝐬𝐞𝐭𝐭 𝐇𝐨𝐥𝐢𝐝𝐚𝐲 𝐜𝐚𝐤𝐞</strong>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo">
-                                            <img src="images/main/social06.png" alt="폴 바셋 #드라이스브루 사진">
-                                            <span class="cate"><img src="images/main/socual_insta.png" alt="인스타"></span>
-                                        </span>
-                                        <strong>폴 바셋 #드라이스브루</strong>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo">
-                                            <img src="images/main/social07.png" alt="유튜브 썸네일 [폴바셋] 시그니처 블렌드 스틱커피.ad">
-                                            <span class="cate"><img src="images/main/socual_insta.png" alt="인스타"></span>
-                                        </span>
-                                        <strong>[폴바셋] 시그니처 블렌드 스틱커피.ad</strong>
-                                    </a>
-                                </li>
-                                <li class="swiper-slide">
-                                    <a href="#n">
-                                        <span class="photo">
-                                            <img src="images/main/social08.png" alt="유튜브 썸네일 폴 바셋... 너 T야? 스페셜T 커피♥">
-                                            <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
-                                        </span>
-                                        <strong>폴 바셋... 너 T야? 스페셜T 커피♥</strong>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="wrapper">
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social01.png" alt="유튜브 썸네일 SPRING FLAVORS 2024.02.29 COMMING SOON">
+                                                <span class="cate"><img src="images/main/social_facebook.png" alt="페이스북"></span>
+                                            </span>
+                                            <strong>𝐏𝐚𝐮𝐥 𝐁𝐚𝐬𝐬𝐞𝐭𝐭 𝐒𝐏𝐑𝐈𝐍𝐆 𝐅𝐋𝐀𝐕𝐎𝐑𝐒</strong>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social02.png" alt="paul bassett 베이글, 커피 사진">
+                                                <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
+                                            </span>
+                                            <strong>폴 바셋 제주 커피 추출 행사</strong>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social03.png" alt="SPRING FLAVORS 2024.02.29 COMMING SOON">
+                                                <span class="cate"><img src="images/main/socual_insta.png" alt="인스타그램"></span>
+                                            </span>
+                                            <strong>Good morning!</strong>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social04.png" alt="Lungo 폴 바셋 커피는 왜 맛있을까? COMMING SOON">
+                                                <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
+                                            </span>
+                                            <strong>폴 바셋 커피는 왜 맛있을까?</strong>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social05.png" alt="케이크 사진">
+                                                <span class="cate"><img src="images/main/socual_insta.png" alt="인스타"></span>
+                                            </span>
+                                         
+                                            <strong>𝐏𝐚𝐮𝐥𝐛𝐚𝐬𝐬𝐞𝐭𝐭 𝐇𝐨𝐥𝐢𝐝𝐚𝐲 𝐜𝐚𝐤𝐞</strong>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social06.png" alt="폴 바셋 #드라이스브루 사진">
+                                                <span class="cate"><img src="images/main/socual_insta.png" alt="인스타"></span>
+                                            </span>
+                                            <strong>폴 바셋 #드라이스브루</strong>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social07.png" alt="유튜브 썸네일 [폴바셋] 시그니처 블렌드 스틱커피.ad">
+                                                <span class="cate"><img src="images/main/socual_insta.png" alt="인스타"></span>
+                                            </span>
+                                            <strong>[폴바셋] 시그니처 블렌드 스틱커피.ad</strong>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <span class="photo">
+                                                <img src="images/main/social08.png" alt="유튜브 썸네일 폴 바셋... 너 T야? 스페셜T 커피♥">
+                                                <span class="cate"><img src="images/main/social_youtube.png" alt="유튜브"></span>
+                                            </span>
+                                            <strong>폴 바셋... 너 T야? 스페셜T 커피♥</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-        <footer></footer>
+        <aside><button>TOP</button></aside>
+        <footer>
+            <div class="wrapper">
+                <!--<div class="f_logo"><img src="images/common/logo.svg" alt="폴바셋"></div>-->
+                <div class="f_sns">
+                    <ul>
+                        <li class="facebook"><a href="#n"><img src="images/main/f_facebook.png" alt="페이스북 로고"></a></li>
+                        <li class="insta"><a href="#n"><img src="images/main/f_insta.png" alt="인스타그램 로고"></a></li>
+                        <li class="youtube"><a href="#n"><img src="images/main/f_youtube.png" alt="유튜브 로고"></a></li>
+                    </ul>
+                </div>
+                <div class="f_link">
+                    <ul>
+                        <li class="link01"><a href="#n"><span>Mobile app</span></a></li>
+                        <li class="link02"><a href="#n"><span>Special Benefit</span></a></li>
+                        <li class="link03"><a href="#n"><span>e- Shop</span></a></li>
+                    </ul>
+                </div>
+                <div class="f_nav">
+                    <ul>
+                        <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="#n">신규입점안내</a></li>
+                        <li><a href="#n">이용약관</a></li>
+                        <li><a href="#n">위치정보 서비스 이용약관</a></li>
+                        <li><a href="#n">소사이어티카드 이용약관</a></li>
+                        <li><a href="#n">기프트카드 이용약관</a></li>
+                        <li><a href="#n">고객센터 사이트맵</a></li>
+                        <li><a href="#n">윤리 HOT-LINE</a></li> 
+                    </ul>
+                </div>
+                <div class="f_info">
+                    <span>엠즈씨드(주)</span> 
+                    <span>대표이사 : 권태훈</span>
+                    <span>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동) <br><br></span>
+                    <span>사업자등록번호 211-88-95935</span>
+                    <span>대표번호 1899-8829</span>
+                    <span>개인정보관리책임자 : 정보문<br><br></span>                
+                    <div class="copyright">© 2019 m’s seed Co., Ltd. All rights reserved.</div>    
+                </div>
+            </div> <!-- wrapper -->
+        </footer>
+       
     </div>
 </body>
 </html>
