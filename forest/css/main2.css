@@ -1,0 +1,238 @@
+@import url(default.css);
+@import url(common.css);
+@import url(layout.css);
+/*
+    파일명 : main.css
+    작성자 : 문미영
+    작성일 : 2024.03.14
+    설  명 : 메인페이지에만 들어가는 스타일을 저장 (header, footer 빼고 전부 다)
+*/
+.container {
+    margin-top: 150px; /* header의 높이만큼 */
+}
+@media screen and (max-width:1024px){
+    .container {
+        margin-top: 100px; /* header의 높이만큼 */
+    }
+}
+@media screen and (max-width:768px){
+    .container {
+        margin-top: 50px; /* header의 높이만큼 */
+    }
+}
+.visual .swiper { 
+    
+} /* 팝업의 높이가 됨 */
+.visual .swiper-slide img {
+    width:100%;
+}
+.visual .swiper-slide img.popup_m {
+    display: none;
+}
+@media screen and (max-width:1640px){
+    .visual .swiper-slide {
+        overflow: hidden;
+    }
+    .visual .swiper-slide img {
+        width: 110%;
+        transform: translate(-5%, 0);
+    }
+}
+@media screen and (min-width:769px) and (max-width:1024px){
+    /* 769~1024까지만 적용 */
+    /* .visual .swiper-slide {
+        position: relative;
+        height: 420px;
+        overflow: hidden;
+    }
+    .visual .swiper-slide img {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: auto;
+        height: 420px;
+        transform: translate(-50%, 0);
+    } */
+}
+
+@media screen and (max-width:768px){
+    .visual .swiper-slide img {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+    .visual .swiper-slide img.popup_pc {
+        display: none;
+    }
+    .visual .swiper-slide img.popup_m {
+        display: block;
+    }
+}
+
+.product {
+    margin: 125px 0 160px 0;
+}
+.product h2 {
+    font-family: 'Bright', serif;
+    font-size: 2.941rem;
+    text-align: center;
+    margin: 0 0 70px 0;
+}
+.product .list ul {
+    align-items: flex-end; /* li의 높이가 다를때 아래 정렬 */
+}
+
+.product .list ul li a {
+    display: block;
+    position: relative; /* before 정렬의 기준 */
+    text-align: center;
+    padding: 0 0 55px 0;
+}
+.product .list ul li a::before {
+    position: absolute;
+    
+    bottom: 7px;
+    z-index: -1;
+    left: 5px;
+    width: calc(100% - 12px);
+    height: 260px; 
+    border-radius: 40px; 
+
+    background: #fff;
+    /*box-shadow: 2px 2px 5px rgba(0,0,0,0.05);*/
+    content: "";
+    transition: 0.5s;
+}
+.product .list ul li a .photo {
+    display: block;
+}
+.product .list ul li a .photo img {
+    width: 250px;
+    max-width: 90%;
+}
+.product .list ul li a .tit {
+    display: block;
+    font-size: 1.176rem;
+}
+.product .list ul li a .name {
+    display: block;
+    font-family: 'Bright', serif;
+    color: #876f53;
+    margin: 5px 0 17px 0;
+    transition: 0.5s;
+}
+.product .list ul li a .info {
+    display: flex;
+    justify-content: center;
+}
+.product .list ul li a .info span + span {
+    /*  <span class="info">        
+            <span></span> ----- 해당사항없음
+            <span></span> ----- 적용됨
+            <span></span> ----- 적용됨
+        </span>*/
+    margin-left: 20px;
+    position: relative; /* before 정렬의 기준 */
+}
+.product .list ul li a .info span + span::before {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 1px;
+    height: 10px;
+    background-color: #cccccc;
+    content: "";
+}
+@media screen and (min-width:769px){
+    /* 왼쪽요소 -active */
+    .product .list ul li.swiper-slide-active a {
+        color: #fff;
+    }
+    .product .list ul li.swiper-slide-active a::before {
+        height: 295px;
+        background: linear-gradient(-45deg, #876f53, #b29574);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+    .product .list ul li.swiper-slide-active a .photo img {
+        width: 280px;
+    }
+    .product .list ul li.swiper-slide-active a .tit {
+        font-size: 1.471rem;
+        font-weight: 900;
+    }
+    .product .list ul li.swiper-slide-active a .name {
+        color: #fff;
+    }
+}
+@media screen and (max-width:768px){
+    .product {
+        margin: 50px 0 60px 0;
+    }
+    .product h2 {
+        margin-bottom: 30px;
+        font-size: 2.3rem;
+    }
+    .product .list ul li {
+        width: 200px;
+    }
+    .product .list ul li a {
+        padding-bottom: 10px;
+    }
+    .product .list ul li a::before {
+        height: 150px; 
+        border-radius: 20px; 
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+    .product .list ul li a .info {
+        display: none;
+    }
+}
+
+.brand {
+    position: relative; /* photo 정렬의 중심 */
+    height: 1000px;
+}
+.brand .photo {
+    position: absolute;
+    left: calc(50% - 104px);
+    top: 0;
+    width: calc(50% + 104px);
+    height: 696px;
+    overflow: hidden;
+    border-radius: 348px 0 0 348px;
+}
+.brand .photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.brand .inner {
+    width: 600px;
+    padding: 125px 0 0 0;
+}
+.brand h2 {
+    font-size: 4.706rem;
+    line-height: 1;
+    font-family: 'Bright', serif;
+    margin: 0 0 25px 0;
+}
+.brand .list ul {
+    margin: 60px 0 0 0;
+    display: flex;
+}
+.brand .list ul li {
+    width: 25%;
+    text-align: center;
+}
+.brand .list ul li strong {
+    display: block;
+    color: #876f53;
+}
+
+@media screen and (max-width:1640px){
+    .brand .photo {
+        left: auto;
+        right: 0;
+        width: calc(100% - 700px);
+    }
+}

@@ -1,0 +1,97 @@
+@import url(default.css);
+@import url(common.css);
+@import url(layout.css);
+/*
+    파일명 : main.css
+    작성자 : 이찬우
+    작성일 : 2024.03.20
+    설  명 : 메인페이지에만 들어가는 스타일을 저장 (header, footer 빼고 전부 다)
+*/
+
+.visual {
+    background-color: #1ca948;
+}
+.tree {
+    background-color: #fff;
+}
+.biz {
+    background-color: #097cbf;
+}
+.new {
+    background-color: #fff;
+}
+footer {
+    height: 500px;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+/**************************************************************** 
+    page에서 자동 생성한 pagenation
+    #fp-nav.fp-left 동일한 선택자 두개가 존재할때
+    꼭 내꺼를 먼저 적용되게 하기 위해서 앞에 body를 추가함
+    body라는 상위 요소로부터 선택자를 입력한 스타일이 먼저 적용됨
+***************************************************************************************/
+body #fp-nav.fp-left {
+    left: 40px;
+}
+
+/* 검은색일때 */
+body #fp-nav::before {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+body #fp-nav ul li .fp-tooltip {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    font-family: inherit;
+    opacity: 1;
+    width: auto;
+}
+body #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    height: 8px;
+    width: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: none;
+    left: 50%;
+    top: 50%;
+    margin-top: 2px;
+}
+
+body #fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    height: 8px;
+    width: 8px;
+    margin: 2px 0 0 -2px;
+    background-color: #fff;
+}
+body #fp-nav ul li:last-child { /* footer 동그라미 삭제 */
+    display: none;
+}
+body #fp-nav ul li, body .fp-slidesNav ul li {
+    margin: 20px 7px;
+}
+body #fp-nav ul li:hover .fp-tooltip,body #fp-nav.fp-show-active a.active + .fp-tooltip {
+    color: #fff;
+}
+
+/* 검은색일때 */
+body #fp-nav[data-color='black']::before {
+    background-color: #1d1d1d;
+}
+body #fp-nav[data-color='black'] ul li .fp-tooltip {
+    color: #1d1d1d;
+}
+body #fp-nav[data-color='black'] ul li a span, .fp-slidesNav ul li a span {
+    border: 1px solid #1d1d1d;
+}
+body #fp-nav[data-color='black'] ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav[data-color='black'] ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    background-color: #1d1d1d;
+}
+body #fp-nav[data-color='black'] ul li:hover .fp-tooltip,body #fp-nav[data-color='black'].fp-show-active a.active + .fp-tooltip {
+    color: #1d1d1d;
+}
