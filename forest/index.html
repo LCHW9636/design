@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.css">
     
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="../forest/favicon.ico">
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
@@ -16,6 +16,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/counting.js"></script>
     <title>생명의숲</title>
 </head>
 <body>
@@ -68,13 +69,38 @@
                             <div class="photo"><img src="images/main/visual03.png" alt=""></div>
                         </li>
                     </ul>
-                </div>
+                    <div class="paging"></div>
+                </div><!--// swiper-->
             </section> <!-- //visual -->
             <section class="section tree">
-
+                <div class="wrapper">
+                    <div class="inner">
+                        <div class="num" data-start="0" data-end="89272" ><h2>2023 심은 나무</h2><strong class="counter">89,272</strong></div>
+                        <p>그루</p>
+                    </div>
+                    <!--<div class="photo"><img src="images/main/tree_bg.png" alt=""></div> -->
+                </div>
             </section> <!-- //tree -->
             <section class="section biz">
-
+                <div class="wrapper">
+                    <div class="inner">
+                        <div class="tit">
+                            <h2>녹색도시공동체를 위한
+                                도시숲운동</h2>
+                            <p>숲을 통해 건강한 도시생태계를 만들고자 합니다. 도시의 생활환경을 개선하기 위해 시민과 함께 숲을 가꿉니다. 지속가능한 도시숲의 관리를 위해 숲을 가꾸는 지역의 자원활동가를 양성화고 활동을 지원합니다. 더 많은 도시민이 숲의 소중함을 느낄 수 있도록 다양한 숲문화교육프로그램을 기획, 운영하고 있습니다.</p>
+                        </div>
+                        <div class="list">
+                            <ul>
+                                <li class="biz01"><a href="#n"><span>도시숲</span></a></li>
+                                <li class="biz02"><a href="#n"><span>숲환경교육</span></a></li>
+                                <li class="biz03"><a href="#n"><span>학교숲</span></a></li>
+                                <li class="biz04"><a href="#n"><span>사회복지숲</span></a></li>
+                                <li class="biz05"><a href="#n"><span>숲길</span></a></li>
+                                <li class="biz06"><a href="#n"><span>공존숲</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section> <!-- //biz -->
             <section class="section news">
 
@@ -85,7 +111,15 @@
                 footer <br>
                 footer
             </footer>
-        </div>
+        </div> <!--// fullpage -->
+        <aside class="quick">
+            <ul>
+                <li class="donation"><a href="#n"><span>후원하기</span></a></li>
+                <li class="my"><a href="#n"><span>마이트리</span></a></li>
+                <li class="youtube"><a href="#n"><span>유튜브</span></a></li>
+                <li class="top"><a href="#n"><span>TOP</span></a></li>
+            </ul>
+        </aside>
     </div>
 </body>
 </html>
