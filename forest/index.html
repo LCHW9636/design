@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/counting.js"></script>
+    <script src="js/main.js"></script>
     <title>생명의숲</title>
 </head>
 <body>
@@ -45,40 +45,44 @@
         </header>
         <div id="fullpage"> 
             <section class="section visual">
-                <div class="swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide">
-                            <div class="tit">
-                                <h2>나무를 심고 숲을 보전하는 시민단체</h2>
-                                <p>시민의 힘으로 나무를 심고 숲을 가꾸고 보전하며,<br>숲의 공공성을 높여 누구나 숲의 가치를 누리는 건강한 사회를 만들어가는 시민단체입니다</p>
-                            </div>
-                            <div class="photo"><img src="images/main/visual01.png" alt=""></div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="tit">
-                                <h2>숲을 움직이는 시민의 힘. 자원활동으로 실현됩니다</h2>
-                                <p>회원은 생명의숲에 정기적으로 후원금을 납부하는 후원자를 말합니다<br>정기총회를 통해 생명의숲의 모든 활동과 재정에 의결권을 가지고 참여할 수 있습니다</p>
-                            </div>
-                            <div class="photo"><img src="images/main/visual02.png" alt=""></div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="tit">
-                                <h2>생명의숲은 시민, 회원의 힘으로 움직입니다</h2>
-                                <p>시민의 힘으로 나무를 심고 숲을 가꾸고 보전하며,<br>숲의 공공성을 높여 누구나 숲의 가치를 누리는 건강한 사회를 만들어가는 시민단체입니다.</p>
-                            </div>
-                            <div class="photo"><img src="images/main/visual03.png" alt=""></div>
-                        </li>
-                    </ul>
-                    <div class="paging"></div>
-                </div><!--// swiper-->
+                <div>
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="tit">
+                                    <h2>나무를 심고 숲을 보전하는 시민단체</h2>
+                                    <p>시민의 힘으로 나무를 심고 숲을 가꾸고 보전하며,<br>숲의 공공성을 높여 누구나 숲의 가치를 누리는 건강한 사회를 만들어가는 시민단체입니다</p>
+                                </div>
+                                <div class="photo"><img src="images/main/visual01.png" alt=""></div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="tit">
+                                    <h2>숲을 움직이는 시민의 힘. 자원활동으로 실현됩니다</h2>
+                                    <p>회원은 생명의숲에 정기적으로 후원금을 납부하는 후원자를 말합니다<br>정기총회를 통해 생명의숲의 모든 활동과 재정에 의결권을 가지고 참여할 수 있습니다</p>
+                                </div>
+                                <div class="photo"><img src="images/main/visual02.png" alt=""></div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="tit">
+                                    <h2>생명의숲은 시민, 회원의 힘으로 움직입니다</h2>
+                                    <p>시민의 힘으로 나무를 심고 숲을 가꾸고 보전하며,<br>숲의 공공성을 높여 누구나 숲의 가치를 누리는 건강한 사회를 만들어가는 시민단체입니다.</p>
+                                </div>
+                                <div class="photo"><img src="images/main/visual03.png" alt=""></div>
+                            </li>
+                        </ul>
+                        <div class="paging"></div>
+                    </div><!--// swiper-->
+                </div>
             </section> <!-- //visual -->
             <section class="section tree">
                 <div class="wrapper">
                     <div class="inner">
-                        <div class="num" data-start="0" data-end="89272" ><h2>2023 심은 나무</h2><strong class="counter">89,272</strong></div>
+                        <div class="num">
+                            <h2>2023 심은 나무</h2>
+                            <strong class="counter" data-start="0" data-end="89272">0</strong>
+                        </div>
                         <p>그루</p>
                     </div>
-                    <!--<div class="photo"><img src="images/main/tree_bg.png" alt=""></div> -->
                 </div>
             </section> <!-- //tree -->
             <section class="section biz">
@@ -103,13 +107,113 @@
                 </div>
             </section> <!-- //biz -->
             <section class="section news">
-
+                <div class="wrapper">
+                    <h2>생명의숲 활동이야기</h2>
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="cate">사회복지숲</span>
+                                        <strong class="subject">자세히 보니 더 아름다운 우리학교 숲, 서울농학교 그린리더 활동 이야기</strong>
+                                        <span class="date">2024.01.31</span>
+                                        <span class="memo">생명의숲은 모두가 누리는 5분 거리의 숲을 꿈꾸며 다양한 활동들을 진행하고 있는데요. 그 중에서도 취약계층의 녹지 접근성을 ...</span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo"><img src="../forest/images/main/news01.JPG" alt="썸네일 나무사진"></span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="cate">공존숲</span>
+                                        <strong class="subject">우리들이 심었던 나무는 어떻게 됐을까</strong>
+                                        <span class="date">2023.12.14</span>
+                                        <span class="memo">10여년전, 우리들이 심었던 나무가 기억나시나요?
+                                            2011년에 생명의숲과 유한킴벌리가 함께 '생명의 나무심기'사업으로 나무를 같이 심었었습니다. 당시 사진을 보시면 그 묘목은 종아리를 넘을까말까 했던 작은 묘목이었습니다,</span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo"><img src="../forest/images/main/news02.JPG" alt="썸네일 숲사진"></span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="cate">사회복지숲</span>
+                                        <strong class="subject">국립서울농학교 8월 그린리더 활동을 만나보세요.</strong>
+                                        <span class="date">2023.09.11</span>
+                                        <span class="memo">다시 돌아온 서울농학교 그린리더 활동! 모기도 입이 비뚤어진다는 처서가 지나니 아침 저녁으로는 조금 선선해진 날씨지요?
+                                            유난히 더웠던 여름방학을 보낸 그린리더들이 오랜만에 텃밭에 모였어요. 비록 텃밭과 뒷산숲엔 아직 모기가 기승을 부리고 있었지만 겨울에 깍두기를 담그기 위해 무우 씨를 심고, 숲에 올라 단풍나무 수액을 신나게 들이켰을 매미들의 흔적(허물)을 관찰했어요.</span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo"><img src="../forest/images/main/news03.JPG" alt="썸네일 농사사진"></span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="cate">학교숲</span>
+                                        <strong class="subject">[카드뉴스] 사진으로 만나는 "우리금융생명의숲"_울진 부구중학교</strong>
+                                        <span class="date">2023.06.20</span>
+                                        <span class="memo">지난 2022년 3월 4일을 기억하시나요? 경북, 강원 등 동해안 일대에서 발생한 장기간 산불은 우리에게 커다란 피해를 남겼습니다. 산불은 순식간에 많은 사람들의 터전을 앗아가고 마음의 평온을 빼앗아갔습니다.</span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo"><img src="../forest/images/main/news04.JPG" alt="썸네일 사진으로 만나는 우리금융 생명의숲! -울진 부구중학교"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--//list-->
+                    <div class="all_view"><a href="#n">전체보기</a></div>
+                </div><!-- wrapper -->
             </section> <!-- //news -->
             <footer class="section fp-auto-height">
-                footer <br>
-                footer <br>
-                footer <br>
-                footer
+                <div class="footer_top">
+                    <div class="wrapper">
+                        <div class="mail">
+                            <div class="tit">
+                                <h2>생명의숲 뉴스레터</h2>
+                                <p class="m_skip">더 나은 내일을 기대하며, <br>오늘 우리는 나무를 함께 심습니다.</p>
+                            </div>
+                            <a href="#n"><span>구독하기</span></a>
+                        </div>
+                        <div class="donation">
+                            <div class="tit">
+                                <h2>생명의숲 정기후원</h2>
+                                <p class="m_skip">우리의 다음 세대를 지키는 아름다운 실천, <br>생명의숲 회원이 되어주세요.</p>
+                            </div>
+                            <a href="#n"><span>후원하기</span></a>
+                        </div>
+                    </div><!--wrapper-->
+                </div><!--footer_top-->
+                <div class="footer_sub">
+                    <div class="wrapper">
+                        <div class="footer_logo"><img src="images/common/logo_w.svg" alt="생명의숲"></div>
+                        <div class="sns">
+                            <ul>
+                                <li class="blog"><a href="#n"><span>블로그</span></a></li>
+                                <li class="face_book"><a href="#n"><span>페이스북</span></a></li>
+                                <li class="kakaoch"><a href="#n"><span>카카오채널</span></a></li>
+                                <li class="insta"><a href="#n"><span>인스타그램</span></a></li>
+                                <li class="youtube"><a href="#n"><span>유튜브</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_cnt">
+                            <div class="footer_nav">
+                                <ul>
+                                    <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                                    <li><a href="#n">저작권보호 및 정책</a></li>
+                                    <li><a href="#n">생명의숲 FAQ</a></li>
+                                    <li><a href="#n">이메일수집거부</a></li>
+                                    <li><a href="#n">문의하기</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_info">
+                                <strong>사단법인 생명의숲</strong>
+                                <span>주소 : 03978 서울특별시 마포구 성미산로11길 5 숲센터 5층</span>
+                                <span>사업자등록번호 : 102-82-09642 / 대표자 : 허상만</span>
+                                <span>Tel : 02-735-3232</span>
+                                <span>Fax : 02-735-3238</span>
+                                <span>Email : admin@forest.or.kr</span>
+                                <span>개인정보책임자 사무처장 최승희</span>
+                            </div>
+                            <div class="copyright">Copyright ⓒ Forest for life All. rights reserved.</div>
+                        </div>
+                    </div><!--wrapper-->
+                </div><!--footer_sub-->
             </footer>
         </div> <!--// fullpage -->
         <aside class="quick">

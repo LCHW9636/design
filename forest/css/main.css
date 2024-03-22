@@ -295,6 +295,7 @@ aside.quick ul li.top a::before {background-image: url("data:image/svg+xml,%3Csv
 
 @media screen and (max-width:768px){
     .tree {
+        height: auto !important;
         min-height: auto !important;
     }
     .tree .inner {
@@ -526,15 +527,136 @@ aside.quick ul li.top a::before {background-image: url("data:image/svg+xml,%3Csv
     }
 }
 
-
-.new {
-    background-color: #fff;
+.news .wrapper {
+    position: relative;
 }
-footer {
-    height: 500px;
-    background-color: #1d1d1d;
+.news h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin-bottom: 34px;
+}
+.news ul li a {
+    display: block;
+    border-top: 1px solid rgba(109, 109, 109, 0.4);
+}
+.news ul li a strong,
+.news ul li a span {
+    display: block;
+}
+.news ul li a .cate {
+    display: inline-block;
+    background-color: #00C0A9;
+    color: #fff;
+    padding: 10px 35px 8px 35px;
+}
+.news ul li a .subject {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 19px 0;
+    /* 2줄제한 */
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+}
+.news ul li a .date {
+    margin-bottom: 20px;
+}
+.news ul li a .memo {
+    display: none;
+    line-height: 1.2;
+    height: 3.6em;
+    overflow: hidden;
+}
+.news ul li a .more {
+    display: none;
+    text-align: center;
+    width: 101px;
+    margin: 0 auto;
+    padding: 5px 18px;
+    border-radius: 50px;
+    background-color: #11A098;
+    margin-top: 29px;
+    font-size: 15px;
     color: #fff;
 }
+.news ul li a .photo {
+    height: 220px;
+}
+.news ul li a .photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.news .all_view {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.news .all_view a {
+    display: block;
+    padding: 5px 35px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 50px;
+}
+
+/* 오버스타일 */
+.news .swiper-slide {
+    height: auto;
+}
+.news ul li {
+    
+}
+.news ul li a:hover {
+    background-color: #00C0A9;
+    color: #fff;
+    border-top: 0;
+    height: 100%;
+    padding: 35px 10% 0 10%;
+}
+.news ul li a:hover .subject {
+    color: #fff;
+}
+.news ul li a:hover .cate {
+    padding: 0;
+}
+.news ul li a:hover .photo {
+    display: none;
+}
+.news ul li a:hover .memo {
+    display: block;
+}
+.news ul li a:hover .more {
+    display: block;
+}
+.news .all_view a:hover {
+    background-color: #11A098;
+    border-color: #11A098;
+    color: #fff;
+}
+@media screen and (max-width:768px){
+    .news {
+        height: auto !important;
+        min-height: auto !important;
+        margin: 97px 0 70px 0;
+    }
+    .news ul li {
+        width: 250px;
+    }
+    .news .all_view {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    .news .all_view a {
+        display: inline-block;
+    }
+}
+
 
 /**************************************************************** 
     page에서 자동 생성한 pagenation
