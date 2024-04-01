@@ -1,0 +1,73 @@
+.header {position:fixed; left: 0; top: 0; z-index: 100; width: 100%; height: 100px; background-color: #365442; color: #fff; display: flex; justify-content: space-between; align-items: flex-start; font-size: 20px; font-weight: 700;}
+.header .logo {margin: 28px 0 0 20px; z-index: 1;}
+.header .logo a {display:block; width: 244px; height: 45px; background: url(../images/logo.png) no-repeat center center / contain; font-size: 0; line-height: 0;}
+.header .gnb .gnb_open, .header .gnb .gnb_close {display: none;}
+.header .gnb .depth1 {position: absolute; top:0; left:0; width: 100%; height: 100px; display: flex; justify-content: center; text-align: center;}
+.header .gnb ul.depth1 > li {width: 180px;}
+.header .gnb ul.depth1 > li.on > a {color: #ED6C24;}
+.header .gnb ul.depth1 > li > a {display: block; line-height: 100px;}
+.header .gnb ul.depth2 {display: none; font-weight: 400; padding-top: 10px;} /* menu_over시에만 보임 */
+.header .gnb ul.depth2 li {line-height: 2.4;}
+.header .gnb ul.depth2 li a:hover {color: #ED6C24; font-weight: 700;}
+.header .tnb {display: flex; justify-content: space-between; margin: 37px 82px 0 0; }
+.header .tnb > a {display: block; z-index: 1; padding: 0 51px 0 0;}
+.header .tnb > a:hover {color: #ED6C24;}
+.header .tnb .sns a {position: relative;  margin-left: 39px; font-size: 0; line-height: 0; }
+.header .tnb .sns a::before {position: absolute; top: -18px; left: 0; width: 24px; height: 24px;  background-position: center center; background-repeat: no-repeat; background-size: contain; content: ""; }
+.header .tnb .sns a.face_book::before {background-image: url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_10_174)'%3E%3Cpath d='M12.1483 13.4987L12.8229 9.15408H8.60535V6.33848C8.60535 5.15296 9.1913 3.99439 11.0786 3.99439H12.9932V0.296379C12.9932 0.296379 11.2558 0 9.59329 0C6.12526 0 3.85639 2.08139 3.85639 5.84676V9.15408H0V13.4987H3.85639V24H8.60535V13.4987H12.1483Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_10_174'%3E%3Crect width='13' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");}
+.header .tnb .sns a.twitter::before {background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.0585144 0L9.32465 13.2374L0 24H2.0986L10.2623 14.5772L16.8584 24H24L14.2125 10.018L22.8918 0H20.7932L13.2748 8.67822L7.20014 0H0.0585144ZM3.14467 1.6516H6.42555L20.9134 22.3481H17.6325L3.14467 1.6516Z' fill='white'/%3E%3C/svg%3E%0A");}
+.header .tnb .sns a.instagram::before {background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_29_16)'%3E%3Cpath d='M18.3482 4.28406C17.5736 4.28406 16.9404 4.91723 16.9404 5.69186C16.9404 6.46649 17.5736 7.09966 18.3482 7.09966C19.1229 7.09966 19.756 6.46649 19.756 5.69186C19.756 4.91723 19.1229 4.28406 18.3482 4.28406Z' fill='white'/%3E%3Cpath d='M12.0978 6.08923C8.83764 6.08923 6.19043 8.74318 6.19043 11.9966C6.19043 15.2501 8.84437 17.904 12.0978 17.904C15.3512 17.904 18.0052 15.2501 18.0052 11.9966C18.0052 8.74318 15.3512 6.08923 12.0978 6.08923ZM12.0978 15.7822C10.0097 15.7822 8.31224 14.0847 8.31224 11.9966C8.31224 9.90849 10.0097 8.21104 12.0978 8.21104C14.1859 8.21104 15.8834 9.90849 15.8834 11.9966C15.8834 14.0847 14.1859 15.7822 12.0978 15.7822Z' fill='white'/%3E%3Cpath d='M16.7859 24H7.20741C3.23323 24 0 20.7668 0 16.7926V7.21415C0 3.23323 3.23323 0 7.20741 0H16.7859C20.76 0 23.9933 3.23323 23.9933 7.20741V16.7859C23.9933 20.76 20.76 23.9933 16.7859 23.9933V24ZM7.20741 2.25653C4.47937 2.25653 2.25653 4.47937 2.25653 7.20741V16.7859C2.25653 19.5139 4.47937 21.7367 7.20741 21.7367H16.7859C19.5139 21.7367 21.7367 19.5139 21.7367 16.7859V7.20741C21.7367 4.47937 19.5139 2.25653 16.7859 2.25653H7.20741Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_29_16'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");}
+
+@media screen and (min-width:1025px){
+    .header.menu_over .depth1{ height: 459px; z-index: -1;  background-color: rgba(54, 84, 66, 0.8); }
+    .header.menu_over .gnb ul .depth2 { display: block;}
+}
+
+@media screen and (max-width:1600px){
+    .header .logo {margin: 31px 0 0 10px;}
+    .header .logo a {width: 190px; height: 35px;}
+    .header .gnb ul.depth1 > li {width: 160px;}
+    .header .tnb {margin: 36px 60px 0 0}
+    .header .tnb > a {padding:0;}
+    .header .tnb .sns a {margin-left: 29px;}
+    .header .tnb .sns a::before {top: -16px; left: 0; width: 20px; height: 20px;}
+}
+@media screen and (max-width:1320px){
+    .header {font-size: 17px;}
+    .header .logo {margin: 34px 0 0 10px;}
+    .header .logo a {width: 150px; height: 28px;}
+    .header .gnb ul.depth1 > li {width: 130px;}
+    .header .tnb {margin: 40px 30px 0 0}
+    .header .tnb > a {font-size: 15px; margin-right: -10px;}
+    .header .tnb .sns a {margin-left: 25px;}
+    .header .tnb .sns a::before {top: -17px; left: 0; width: 17px; height: 17px;}
+}
+@media screen and (max-width:1024px){ /***************** 모바일 *************************/
+    .header {height: 50px;}
+    .header .logo {margin: 13px 0 0 10px;}
+    .header .logo a {width: 120px; height: 22px;}
+    .header.menu_open .logo {display: none;}
+    .header .gnb .gnb_wrap {display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100vh; background-color: #365442; cp;padding-right: #fff;}
+    .header.menu_open .gnb .gnb_wrap {display: block; /* 메뉴보임 */}
+    .header .gnb .gnb_open {display: block;}
+    .header .gnb .gnb_open, .header .gnb .gnb_close {position: absolute; top: 0; right: 0; width: 60px; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: 30px auto; content: ""; font-size: 0; line-height: 0;}
+    .header .gnb .gnb_open {background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z' fill='white'/%3E%3C/svg%3E%0A");}
+    .header .gnb .gnb_close {background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.9996 16.3173L8.65824 22.6586C8.48518 22.8317 8.26764 22.9202 8.00562 22.9242C7.74362 22.9283 7.52208 22.8397 7.34099 22.6586C7.15989 22.4775 7.06934 22.258 7.06934 22C7.06934 21.742 7.15989 21.5224 7.34099 21.3414L13.6823 15L7.34099 8.65861C7.16791 8.48554 7.07937 8.268 7.07537 8.00598C7.07135 7.74398 7.15989 7.52244 7.34099 7.34136C7.52208 7.16025 7.74162 7.0697 7.99962 7.0697C8.25762 7.0697 8.47716 7.16025 8.65824 7.34136L14.9996 13.6827L21.341 7.34136C21.5141 7.16827 21.7316 7.07973 21.9936 7.07573C22.2556 7.07171 22.4772 7.16025 22.6582 7.34136C22.8393 7.52244 22.9299 7.74198 22.9299 7.99998C22.9299 8.25798 22.8393 8.47752 22.6582 8.65861L16.3169 15L22.6582 21.3414C22.8313 21.5144 22.9199 21.732 22.9239 21.994C22.9279 22.256 22.8393 22.4775 22.6582 22.6586C22.4772 22.8397 22.2576 22.9303 21.9996 22.9303C21.7416 22.9303 21.5221 22.8397 21.341 22.6586L14.9996 16.3173Z' fill='white'/%3E%3C/svg%3E%0A");}
+    .header.menu_open .gnb .gnb_close {display: block;}
+    .header .gnb ul.depth1 {display: block; text-align: left; margin-top: 50px; height: calc(100vh - 100px); overflow-y: auto;}
+    .header .gnb ul.depth1 > li {width: auto; margin-top: 50px;}
+    .header .gnb ul.depth1 > li:first-child {margin-top: 20px;}
+    .header .gnb ul.depth1 > li > a {position: relative; font-size: 20px; font-weight: 400; line-height: 50px; padding: 0 20px;}
+    .header .gnb ul.depth1 > li > a::before {position: absolute; right: 15px; top: 10px; width: 30px; height: 30px; content: ""; background-repeat: no-repeat; background-position: center center; background-size: contain; background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9999 14.373C11.8922 14.373 11.7928 14.3554 11.7018 14.3202C11.6108 14.2849 11.5217 14.2237 11.4345 14.1365L7.04606 9.74804C6.95247 9.65445 6.90247 9.53971 6.89606 9.40381C6.88964 9.26791 6.93964 9.14675 7.04606 9.04034C7.15247 8.93394 7.27042 8.88074 7.3999 8.88074C7.52939 8.88074 7.64734 8.93394 7.75375 9.04034L11.9999 13.2865L16.2461 9.04034C16.3396 8.94675 16.4544 8.89675 16.5903 8.89034C16.7262 8.88394 16.8473 8.93394 16.9538 9.04034C17.0602 9.14675 17.1134 9.2647 17.1134 9.39419C17.1134 9.52369 17.0602 9.64164 16.9538 9.74804L12.5653 14.1365C12.4781 14.2237 12.389 14.2849 12.298 14.3202C12.207 14.3554 12.1076 14.373 11.9999 14.373Z' fill='white'/%3E%3C/svg%3E%0A");}
+    .header .gnb ul.depth1 > li.on > a::before {background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0002 10.1019L7.75404 14.3481C7.66046 14.4417 7.54572 14.4917 7.40982 14.4981C7.27392 14.5045 7.15276 14.4545 7.04634 14.3481C6.93993 14.2417 6.88672 14.1237 6.88672 13.9942C6.88672 13.8647 6.93993 13.7468 7.04634 13.6404L11.4348 9.25193C11.522 9.16475 11.6111 9.10353 11.7021 9.06828C11.7931 9.03301 11.8925 9.01538 12.0002 9.01538C12.1079 9.01538 12.2073 9.03301 12.2983 9.06828C12.3893 9.10353 12.4784 9.16475 12.5656 9.25193L16.954 13.6404C17.0476 13.734 17.0976 13.8487 17.104 13.9846C17.1105 14.1205 17.0605 14.2417 16.954 14.3481C16.8476 14.4545 16.7297 14.5077 16.6002 14.5077C16.4707 14.5077 16.3528 14.4545 16.2463 14.3481L12.0002 10.1019Z' fill='white'/%3E%3C/svg%3E%0A");}
+    .header .gnb ul.depth1 > li.on > a {color: #fff; font-weight: 700;}
+    .header .gnb ul.depth1 > li.on > ul.depth2 { display: block;}
+    .header .gnb ul.depth2 li {font-weight: 400; padding-left: 40px; line-height: 3.6;}
+    .header .gnb ul.depth2 li a:hover {color: #fff;}
+    .header .tnb {display: none;}
+    .header.menu_open .tnb {display: flex; flex-direction: row-reverse; align-items: center;  position: absolute; left: 0; top: 0; margin: 14px 0 0 -11px;}
+    .header .tnb > a {font-size: 13px; font-weight: 400; margin-left: 40px; margin-bottom: 5px; padding: 2px 10px; border: 1px solid rgba(255, 255, 255, 0.8); border-radius: 12px;}
+    .header .tnb .sns a {margin-left: 30px;}
+    /********************** SNS 누르는 범위 좁음 넓혀야됨!!!!!!!!!!!!!! ***********************************/
+    .header .tnb > a:hover {color: #fff;}
+}

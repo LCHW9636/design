@@ -1,34 +1,32 @@
 @charset "utf-8"; /* 이css문서는 UTF-8방식으로 인코딩 되어 있습니다. */
 
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 400;
-    font-display: swap;
-    src: local('Pretendard Light'), url(../fonts/Pretendard-reguler.woff2) format('woff2'), url(../fonts/Pretendard-reguler.woff) format('woff');
-}
-@font-face {
-    font-family: 'Pretendard';
-    font-weight: 700;
-    font-display: swap;
-    src: local('Pretendard Black'), url(../fonts/Pretendard-bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
-}
+/* 한글웹폰트 */
+
+@font-face {font-family: 'Pretendard';font-weight: 400;font-display: swap;src: local('Pretendard Regular'), url(../fonts/pretendard/woff2/Pretendard-Regular.woff2) format('woff2'), url(../fonts/pretendard/woff/Pretendard-Regular.woff) format('woff');}
+@font-face {font-family: 'Pretendard';font-weight: 700;font-display: swap;src: local('Pretendard bold'), url(../fonts/pretendard/woff2/Pretendard-Bold.woff2) format('woff2'), url(../fonts/pretendard/woff/Pretendard-Bold.woff) format('woff');}
+@font-face {font-family: 'Bright';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.4/Bright.woff') format('woff');font-weight: normal;font-style: normal;}
+
 *::selection {
-    background-color: #1d1d1d;
-    color: #fff;
+    background-color: #13271C;
+    color: #876f53;
 }
 *::-moz-selection { /* 호환성을 위한 코드 */
-    background-color: #1d1d1d;
-    color: #fff;
+    background-color: #090606;
+    color: #C1D9DB;
 }
 html, body {
+    /* 만약에 내가 정의한 웹폰트가 적용안되면, 맑은 고딕(window용) 또는 애플고딕(맥용) 사용 */
     font-family: 'Pretendard', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
     font-size: 15px; /* 크기 */
     background-color: #fff;
-    color: #1d1d1d; /* 글자색상 */
+    color: #3d3d3d; /* 글자색상 */
     font-weight: 400; /* 글자의 두께 */
-    line-height: 1.1; /* auto */
+    line-height: 1.4; /* auto */
     word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
     word-wrap: break-word; /* 만약 단어가 엄청 길면 분리해서 줄바꿈 */
+}
+.f_bright {
+    font-family: 'Bright', serif;
 }
 .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
     width: 1280px; /* 홈페이지 넓이 */
@@ -39,12 +37,7 @@ html, body {
     overflow: hidden;
 }
 
-@media screen and (max-width:1640px){
-    .wrapper { 
-        width: auto; 
-        margin: 0 20px;  
-    }
-}/*media*/
+/*media*/
 @media screen and (max-width:1320px){
     html, body {
         font-size: 15px;
@@ -75,9 +68,9 @@ html, body {
     width: 100%;
     line-height: 50px;
     text-align: center;
-    background-color: #1d1d1d;
+    background-color: #F51919;
     color: #fff;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
 }
 .skipnav a[href="#gnb"] {
@@ -86,12 +79,3 @@ html, body {
 .skipnav a:focus {
     top: 100px;
 }
-
-/*
-    파일명 : common.css
-    작성자 : 이찬우
-    작성일 : 2024.03.28
-    설  명 : 홈페이지 전체에 공통으로 적용되는 스타일을 저장
-             문자스타일 등의 기본스타일만 저장
-
-*/
