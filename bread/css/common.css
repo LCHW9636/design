@@ -4,11 +4,10 @@
 
 @font-face {font-family: 'Pretendard';font-weight: 400;font-display: swap;src: local('Pretendard Regular'), url(../fonts/pretendard/woff2/Pretendard-Regular.woff2) format('woff2'), url(../fonts/pretendard/woff/Pretendard-Regular.woff) format('woff');}
 @font-face {font-family: 'Pretendard';font-weight: 700;font-display: swap;src: local('Pretendard bold'), url(../fonts/pretendard/woff2/Pretendard-Bold.woff2) format('woff2'), url(../fonts/pretendard/woff/Pretendard-Bold.woff) format('woff');}
-@font-face {font-family: 'Bright';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.4/Bright.woff') format('woff');font-weight: normal;font-style: normal;}
 
 *::selection {
-    background-color: #13271C;
-    color: #876f53;
+    background-color: #3d3d3d;
+    color: #fff;
 }
 *::-moz-selection { /* 호환성을 위한 코드 */
     background-color: #090606;
@@ -18,7 +17,7 @@ html, body {
     /* 만약에 내가 정의한 웹폰트가 적용안되면, 맑은 고딕(window용) 또는 애플고딕(맥용) 사용 */
     font-family: 'Pretendard', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
     font-size: 15px; /* 크기 */
-    background-color: #fff;
+    background-color: #F5EDE5;
     color: #3d3d3d; /* 글자색상 */
     font-weight: 400; /* 글자의 두께 */
     line-height: 1.4; /* auto */
