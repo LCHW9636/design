@@ -83,11 +83,11 @@ $(document).ready(function(){
         spaceBetween: 0, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
             769: {    /* 769px 이상일때 적용 */
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 0,
             },
             1025: {   /* 1025px 이상일때 적용 */
-                slidesPerView: 4,
+                slidesPerView: 6,
                 spaceBetween: 0,
             },
             1321: {    /* 1321px 이상일때 적용 */

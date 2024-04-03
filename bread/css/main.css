@@ -111,7 +111,8 @@
 .products .more a::after {position: absolute; right: 10px; top: 5px; width: 24px; height: 24px; content: ""; background-position: center center; background-repeat: no-repeat; background-size: contain; background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 12.5H6V11.5H11.5V6H12.5V11.5H18V12.5H12.5V18H11.5V12.5Z' fill='%232D2D2D'/%3E%3C/svg%3E%0A"); transition:0.2s;}
 .products .more a:hover {background-color: #ED6C24; color: #fff; border: 1px solid rgba(237, 108, 36, 1); }
 .products .more a:hover::after {background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 12.5H6V11.5H11.5V6H12.5V11.5H18V12.5H12.5V18H11.5V12.5Z' fill='white'/%3E%3C/svg%3E%0A"); transform: rotate(180deg);}
-.products .list ul li a strong {color: #1d1d1d;}
+.products .list ul li a {display: block; background-color: #fff; border-radius: 20px; z-index: 1;}
+.products .list ul li a strong {display: block; text-align: center; font-weight: 700; color: #1d1d1d; padding-bottom: 20px;}
 .products .list ul li img {display: block; width: 100%; height: 100%; object-fit: cover; margin-bottom: 20px; border-radius: 20px;}
 .products .list ul li a .memo {display: none; font-size: 15px; color: #fff;  padding: 0 11px;}
 /* 제품 오버스타일 */
@@ -162,13 +163,14 @@
 .biz .biz_link a.Recru:hover::after{background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM8 13H16C16 15.2091 14.2091 17 12 17C9.79086 17 8 15.2091 8 13ZM8 11C7.17157 11 6.5 10.3284 6.5 9.5C6.5 8.67157 7.17157 8 8 8C8.82843 8 9.5 8.67157 9.5 9.5C9.5 10.3284 8.82843 11 8 11ZM16 11C15.1716 11 14.5 10.3284 14.5 9.5C14.5 8.67157 15.1716 8 16 8C16.8284 8 17.5 8.67157 17.5 9.5C17.5 10.3284 16.8284 11 16 11Z' fill='white'/%3E%3C/svg%3E%0A");}
 
 @media screen and (max-width:1320px){
+    .biz {margin-top: 120px; height: 450px;}
     .biz .photo img {height: 400px; width: auto;}
     .biz .inner h2 {font-size: 30px; margin-bottom: 20px;}
     .biz .inner {margin-top: 10px; left: calc(50% - 40px); width: calc(50% + 40px);}
     .biz .biz_link a::after {top:15px; right: 20px; width: 24px; height: 24px; content: ""; background-position: center center; background-repeat: no-repeat; background-size: contain;}
 }
 @media screen and (max-width:1024px){
-    .biz {margin-top: 50px;}
+    .biz {margin-top: 50px; height: 335px;}
     .biz .wrapper {margin: 0;}
     .biz .photo {height: 335px;}
     .biz .photo img {height: 100%; width: 100%; object-fit: cover; filter: brightness(0.5);}
@@ -188,5 +190,37 @@
     .biz .biz_link a.Recru:hover::after{background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM8 13H16C16 15.2091 14.2091 17 12 17C9.79086 17 8 15.2091 8 13ZM8 11C7.17157 11 6.5 10.3284 6.5 9.5C6.5 8.67157 7.17157 8 8 8C8.82843 8 9.5 8.67157 9.5 9.5C9.5 10.3284 8.82843 11 8 11ZM16 11C15.1716 11 14.5 10.3284 14.5 9.5C14.5 8.67157 15.1716 8 16 8C16.8284 8 17.5 8.67157 17.5 9.5C17.5 10.3284 16.8284 11 16 11Z' fill='%2349270E'/%3E%3C/svg%3E%0A");}
 }
 
+.sns h2 {font-size: 50px; text-align: center; margin-top: 105px;}
+.sns ul li img {width: 100%; height: auto; margin: 79px 0 93px 0;}
+@media screen and (max-width:1320px){
+    .sns h2 {font-size: 40px; margin-top: 30px;}
+    .sns ul li img {margin: 40px 0 55px 0;}
+}
+@media screen and (max-width:1024px){
+    .sns h2 {font-size: 20px; margin-top: 55px;}
+    .sns ul li img {margin: 35px 0 35px 0;}
+}
 
-.sns ul li img {width: 100%; height: auto;}
+.Service {display: block;}
+.Service ul {display: flex;}
+.Service ul li {margin-right: 28px; border-right: 1px solid rgba(179, 145, 113, 0.8); width: 33.33%;}
+.Service ul li:last-child {margin-right: 0px; border-right: 0;}
+.Service ul li a {position: relative; display: block;}
+.Service ul li a::after {position: absolute; right: 20px; top: 50px; width: 24px; height: 24px; content: ""; background-repeat: no-repeat; background-position: center center; background-size: contain; background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.4004 11.9999L7.57539 4.1749C7.45872 4.05824 7.40039 3.91657 7.40039 3.7499C7.40039 3.58324 7.45872 3.44157 7.57539 3.3249C7.69206 3.20824 7.83372 3.1499 8.00039 3.1499C8.16706 3.1499 8.30872 3.20824 8.42539 3.3249L16.0504 10.9499C16.2004 11.0999 16.3087 11.2666 16.3754 11.4499C16.4421 11.6332 16.4754 11.8166 16.4754 11.9999C16.4754 12.1832 16.4421 12.3666 16.3754 12.5499C16.3087 12.7332 16.2004 12.8999 16.0504 13.0499L8.42539 20.6749C8.30872 20.7916 8.16706 20.8499 8.00039 20.8499C7.83372 20.8499 7.69206 20.7916 7.57539 20.6749C7.45872 20.5582 7.40039 20.4166 7.40039 20.2499C7.40039 20.0832 7.45872 19.9416 7.57539 19.8249L15.4004 11.9999Z' fill='%232D2D2D'/%3E%3C/svg%3E%0A");}
+.Service h2 {font-size: 20px; font-weight: 700; color: #1d1d1d; margin: 0 0 25px 0; }
+.Service p {width: 327px;}
+@media screen and (max-width:1320px){
+    .Service ul li {margin-right: 14px;}
+    .Service ul li a::after {right: 10px; top: 35px; width: 17px; height: 17px;}
+    .Service h2 {font-size: 17px; margin: 0 0 10px 0; }
+    .Service p {width: 90%;}
+}
+@media screen and (max-width:1024px){
+    .Service {margin-top: -30px;}
+    .Service ul {display: block;}
+    .Service h2 {font-size: 15px; margin: 0 0 12px 0; }
+    .Service ul li {width: 100%; margin-right: 0; border-right: 0; border-bottom: 1px solid rgba(179, 145, 113, 0.8);} 
+    .Service ul li:last-child {border-bottom:0;}
+    .Service ul li a {padding: 25px 0 25px 0;}
+    .Service ul li a::after {right: 0; top: 58px;}
+}
