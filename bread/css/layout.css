@@ -72,7 +72,7 @@
     .header .logo {margin: 13px 0 0 10px;}
     .header .logo a {width: 120px; height: 22px;}
     .header.menu_open .logo {display: none;}
-    .header .gnb .gnb_wrap {display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100vh; background-color: #365442; cp;padding-right: #fff;}
+    .header .gnb .gnb_wrap {display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100vh; background-color: #365442; }
     .header.menu_open .gnb .gnb_wrap {display: block; /* 메뉴보임 */}
     .header .gnb .gnb_open {display: block;}
     .header .gnb .gnb_open, .header .gnb .gnb_close {position: absolute; top: 0; right: 0; width: 60px; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: 30px auto; content: ""; font-size: 0; line-height: 0;}
