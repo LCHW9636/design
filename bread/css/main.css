@@ -152,14 +152,14 @@
 }
 
 .biz {margin-top: 170px; height: 508px;}
-.biz .wrapper {position: relative;}
-.biz .photo {display: block; position: absolute; left: 0; top: 0; width: 100%; height: 508px;}
-.biz .inner {position: absolute; left: calc(50% + 16px); top: 0; height: 508px; width: calc(50% - 16px); margin-top: 53px;}
+.biz .wrapper {display: flex; justify-content: space-between; position: relative;}
+.biz .photo {width: 42.5%;}
+.biz .photo img {width: 100%;}
+.biz .inner {width: 51%; margin-top: 53px;}
 .biz .inner h2 {font-size: 50px; font-weight: 700; color: #1d1d1d; margin-bottom: 20px;}
 .biz .inner h2 strong {color:#ED6C24;}
 .biz .inner p {line-height: 1.4}
 .biz .biz_link {margin-top: 66px;}
-
 .biz .biz_link a {position: relative; margin-right: 10px; padding: 19px 64px 19px 17px; border: 1px solid rgba(73, 39, 14, 1); border-radius: 10px; color: #49270E;}
 .biz .biz_link a::after {position: absolute; top:15px; right: 20px; width: 24px; height: 24px; content: ""; background-position: center center; background-repeat: no-repeat; background-size: contain;}
 .biz .biz_link a.brand::after {background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 3C2.79086 3 1 4.79086 1 7C1 8.48168 1.8052 9.77343 3 10.4646V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V10.4646C22.1948 9.77343 23 8.48168 23 7C23 4.79086 21.2091 3 19 3H5ZM7 20C6.44772 20 6 19.5523 6 19V9.12212L5.33325 8.88645C4.5551 8.61142 4 7.86925 4 7C4 5.89543 4.89543 5 6 5H19C20.1046 5 21 5.89543 21 7C21 7.86925 20.4449 8.61142 19.6668 8.88645L19 9.12212V19C19 19.5523 18.5523 20 18 20H7Z' fill='%2349270E'/%3E%3C/svg%3E%0A");}
@@ -172,20 +172,19 @@
 
 @media screen and (max-width:1320px){
     .biz {margin-top: 120px; height: 450px;}
-    .biz .photo img {height: 400px; width: auto;}
     .biz .inner h2 {font-size: 30px; margin-bottom: 20px;}
     .biz .inner {margin-top: 10px; left: calc(50% - 40px); width: calc(50% + 40px);}
     .biz .biz_link a::after {top:15px; right: 20px; width: 24px; height: 24px; content: ""; background-position: center center; background-repeat: no-repeat; background-size: contain;}
 }
 @media screen and (max-width:1024px){
-    .biz {margin-top: 50px; height: 335px;}
-    .biz .wrapper {margin: 0;}
-    .biz .photo {height: 335px;}
-    .biz .photo img {height: 100%; width: 100%; object-fit: cover; filter: brightness(0.5);}
-    .biz .inner {position: absolute; left: 0; top: 0; height: auto; width: 100%; margin-top: 50px; padding: 0 20px;}    
+    .biz {margin-top: 50px; height: auto;}
+    .biz .wrapper {display: block; margin: 0;}
+    .biz .photo {width: 100%; height: 335px; position: relative; }
+    .biz .photo img {height: 335px; width: 100%; object-fit: cover; filter: brightness(0.5);}
+    .biz .inner {position: absolute; top: 0; left: 0; width: 100%; margin-top: 70px; padding: 0 20px;}    
     .biz .inner h2, .biz .inner h2 strong {font-size: 24px; color: #fff; margin-bottom: 20px;}
     .biz .inner p {display: none;}
-    .biz .biz_link {display: flex; margin-top: 65px;}
+    .biz .biz_link {display: flex; margin-top: 40px;}
     .biz .biz_link a {position: relative; display: flex; justify-content: center; width: 33.33%; margin-right: 22px; padding: 40px 4px 13px 4px; border: 0; color: #49270E; background-color: #fff;}
     .biz .biz_link a:last-child {margin-right: 0;}
     .biz .biz_link a::after {position: absolute; top: 10px; right: calc(50% - 12px); width: 24px; height: 24px; content: ""; background-position: center center; background-repeat: no-repeat; background-size: contain;}
@@ -211,7 +210,7 @@
 
 .Service {display: block;}
 .Service ul {display: flex;}
-.Service ul li {margin-right: 28px; border-right: 1px solid rgba(179, 145, 113, 0.8); width: 33.33%;}
+.Service ul li {margin-right: 28px; border-right: 1px solid rgba(179, 145, 113, 0.8); width: calc(33.33% - 18px);}
 .Service ul li:last-child {margin-right: 0px; border-right: 0;}
 .Service ul li a {position: relative; display: block;}
 .Service ul li a::after {position: absolute; right: 20px; top: 50px; width: 24px; height: 24px; content: ""; background-repeat: no-repeat; background-position: center center; background-size: contain; background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.4004 11.9999L7.57539 4.1749C7.45872 4.05824 7.40039 3.91657 7.40039 3.7499C7.40039 3.58324 7.45872 3.44157 7.57539 3.3249C7.69206 3.20824 7.83372 3.1499 8.00039 3.1499C8.16706 3.1499 8.30872 3.20824 8.42539 3.3249L16.0504 10.9499C16.2004 11.0999 16.3087 11.2666 16.3754 11.4499C16.4421 11.6332 16.4754 11.8166 16.4754 11.9999C16.4754 12.1832 16.4421 12.3666 16.3754 12.5499C16.3087 12.7332 16.2004 12.8999 16.0504 13.0499L8.42539 20.6749C8.30872 20.7916 8.16706 20.8499 8.00039 20.8499C7.83372 20.8499 7.69206 20.7916 7.57539 20.6749C7.45872 20.5582 7.40039 20.4166 7.40039 20.2499C7.40039 20.0832 7.45872 19.9416 7.57539 19.8249L15.4004 11.9999Z' fill='%232D2D2D'/%3E%3C/svg%3E%0A");}
