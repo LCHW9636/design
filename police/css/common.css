@@ -1,0 +1,81 @@
+@charset "utf-8"; /* 이css문서는 UTF-8방식으로 인코딩 되어 있습니다. */
+
+/* 한글웹폰트 */
+
+@font-face {font-family: 'Pretendard';font-weight: 400;font-display: swap;src: local('Pretendard Regular'), url(../fonts/pretendard/woff2/Pretendard-Regular.woff2) format('woff2'), url(../fonts/pretendard/woff/Pretendard-Regular.woff) format('woff');}
+@font-face {font-family: 'Pretendard';font-weight: 700;font-display: swap;src: local('Pretendard bold'), url(../fonts/pretendard/woff2/Pretendard-Bold.woff2) format('woff2'), url(../fonts/pretendard/woff/Pretendard-Bold.woff) format('woff');}
+
+*::selection {
+    background-color: #3d3d3d;
+    color: #fff;
+}
+*::-moz-selection { /* 호환성을 위한 코드 */
+    background-color: #090606;
+    color: #C1D9DB;
+}
+html, body {
+    /* 만약에 내가 정의한 웹폰트가 적용안되면, 맑은 고딕(window용) 또는 애플고딕(맥용) 사용 */
+    font-family: 'Pretendard', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
+    font-size: 15px; /* 크기 */
+    background-color: #F5EDE5;
+    color: #2d2d2d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.4; /* auto */
+    word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 분리해서 줄바꿈 */
+}
+.f_bright {
+    font-family: 'Bright', serif;
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*media*/
+@media screen and (max-width:1320px){
+    html, body {
+        font-size: 15px;
+    }
+}/*media*/
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 14px;
+    }
+}/*media*/
+@media screen and (max-width:768px){
+    html, body {
+        font-size: 13px;
+    }
+}
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 1000000000000;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #F51919;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+.skipnav a[href="#gnb"] {
+    background-color: #1d1d1d;
+}
+.skipnav a:focus {
+    top: 100px;
+}
