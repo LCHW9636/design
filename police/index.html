@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- swiper 라이브러리-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <!-- AOS를 작동시키기 위한 css와 js파일 -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+        <script src="js/main.js"></script>
+        <script src="js/common.js"></script>    
+    <title>충북경찰청</title>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <header class="header">
+            <div class="wrapper">
+                <div class="inner">
+                    <h1 class="logo"><a href="index.html">충북경찰청</a></h1>
+                    <nav class="gnb">
+                        <button class="gnb_open"></button>
+                        <div class="gnb_wrap">
+                            <ul class="depth1">
+                                <li>
+                                    <a href="#n"><span>정보공개</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>정보공개제도안내</span></a></li>
+                                        <li><a href="#n"><span>사전정보공표</span></a></li>
+                                        <li><a href="#n"><span>비공개세부기준 정보목록</span></a></li>
+                                        <li><a href="#n"><span>정보공개청구</span></a></li>
+                                        <li><a href="#n"><span>공공데이터개방</span></a></li>
+                                        <li><a href="#n"><span>무인단속장비</span></a></li>
+                                        <li><a href="#n"><span>교통규제정보</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>국민마당</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>자유게시판</span></a></li>
+                                        <li><a href="#n"><span>칭찬합시다</span></a></li>
+                                        <li><a href="#n"><span>범죄피해자보호 · 지원</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>알림마당</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>공지사항</span></a></li>
+                                        <li><a href="#n"><span>충북경찰활동</span></a></li>
+                                        <li><a href="#n"><span>충북경찰소식(행복한동행)</span></a></li>
+                                        <li><a href="#n"><span>언론보도</span></a></li>
+                                        <li><a href="#n"><span>오늘의 집회 시위</span></a></li>
+                                        <li><a href="#n"><span>채용안내</span></a></li>
+                                        <li><a href="#n"><span>입찰공고</span></a></li>
+                                        <li><a href="#n"><span>업무추진비 등 내역</span></a></li>
+                                        <li><a href="#n"><span>충북경찰 훈령·예규</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>민원마당</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>민원처리안내</span></a></li>
+                                        <li><a href="#n"><span>민원상담</span></a></li>
+                                        <li><a href="#n"><span>민원서식</span></a></li>
+                                        <li><a href="#n"><span>조회서비스</span></a></li>
+                                        <li><a href="#n"><span>경찰청 유실물 종합안내</span></a></li>
+                                        <li><a href="#n"><span>청렴위반신고센터</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>소개마당</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>청장 소개</span></a></li>
+                                        <li><a href="#n"><span>기구와 업무</span></a></li>
+                                        <li><a href="#n"><span>충북경찰연혁</span></a></li>
+                                        <li><a href="#n"><span>협력단체 현황</span></a></li>
+                                        <li><a href="#n"><span>경찰소개</span></a></li>
+                                        <li><a href="#n"><span>오시는 길</span></a></li>
+                                        <li><a href="#n"><span>역대 충북경찰청장</span></a></li>
+                                        <li><a href="#n"><span>치안시스템 견학</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#n" target="_blank" title="새창링크" class="link"><span>경찰민원사이트</a></li>
+                            </ul>
+                        </div>
+                        <button class="gnb_close">메뉴닫기</button>
+                    </nav>
+                    <div class="search_gruop">
+                        <form> 
+                            <!-- 모든 입력양식 form태그 안에 들어와야함 단 form태그를 삭제할 수도 있으니, 
+                                div처럼 쓰지 말고 이 태그가 없다고 생각 (아이디/클래스 주지말기) -->
+                            <fieldset> <!-- 회원정보와 부가정보 입력을 받으면 정보의 묶음-->
+                                <legend>검색</legend><!-- dl form의 역할 -->
+                                <div class="search">
+                                    <!-- label은 input type="text"의 제목
+                                    label에는 for input id를 동일한 단어를 써줘서
+                                    그 입력창의 제목이라는 것을 표시
+                                    submit 버튼은 필요 없음 balue써줌-->
+                                    <label for="keyword">검색어</label>
+                                    <input type="text" id="keyword" placeholder="무엇을 도와드릴까요?"> <!-- 검색어 입력 -->
+                                    <input type="submit" value="확인"> <!-- 검색버튼 / 전송 -->
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div> <!--//search_group-->
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <section class="visual"></section>
+            <section class="Service"></section>
+            <section class="notice"></section>
+            <section class="sns"></section>
+            <section class="sns_link"></section>
+            <section class="chief"></section>
+            <section class="shortcut"></section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

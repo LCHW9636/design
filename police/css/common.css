@@ -10,22 +10,19 @@
     color: #fff;
 }
 *::-moz-selection { /* 호환성을 위한 코드 */
-    background-color: #090606;
-    color: #C1D9DB;
+    background-color: #2d2d2d;
+    color: #fff;
 }
 html, body {
     /* 만약에 내가 정의한 웹폰트가 적용안되면, 맑은 고딕(window용) 또는 애플고딕(맥용) 사용 */
     font-family: 'Pretendard', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
     font-size: 15px; /* 크기 */
-    background-color: #F5EDE5;
+    background-color: #fff;
     color: #2d2d2d; /* 글자색상 */
     font-weight: 400; /* 글자의 두께 */
     line-height: 1.4; /* auto */
     word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
     word-wrap: break-word; /* 만약 단어가 엄청 길면 분리해서 줄바꿈 */
-}
-.f_bright {
-    font-family: 'Bright', serif;
 }
 .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
     width: 1280px; /* 홈페이지 넓이 */
