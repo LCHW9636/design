@@ -101,3 +101,5 @@
     .header.menu_open .search_gruop .search {display: block;}
     .header.menu_open .search_gruop .search input[type="submit"] {display: block;}
 }
+
+.footer {height: 3000px;}
