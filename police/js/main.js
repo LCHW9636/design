@@ -39,15 +39,15 @@ $(document).ready(function(){
 	breakpoints: {
 		640: {    /* 640px 이상일때 적용 */
 			slidesPerView: 3,
-			spaceBetween: 20,
+			spaceBetween: 16,
 		},
 		768: {    /* 768px 이상일때 적용 */
 			slidesPerView: 4,
-			spaceBetween: 30,
+			spaceBetween: 20,
 		},
 		1024: {   /* 1024px 이상일때 적용 */
 			slidesPerView: 5,
-			spaceBetween: 40,
+			spaceBetween: 30,
 		},
 		1280: {    /* 1280px 이상일때 적용 */
 			slidesPerView: 8,
