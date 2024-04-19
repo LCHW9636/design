@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     const service_swiper = new Swiper('.service .swiper', { /* 팝업을 감싼는 요소의 class명 */
 	slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
-	spaceBetween: 12, /* 팝업과 팝업 사이 여백 */
+	spaceBetween: 10, /* 팝업과 팝업 사이 여백 */
 	breakpoints: {
-		320: {    /* 640px 이상일때 적용 */
-			slidesPerView: 2,
-			spaceBetween: 12,
+		425: {    /* 640px 이상일때 적용 */
+			slidesPerView: 3,
+			spaceBetween: 15,
 		},
 		640: {    /* 640px 이상일때 적용 */
-			slidesPerView: 4,
+			slidesPerView: 5,
 			spaceBetween: 15,
 		},
 		768: {    /* 768px 이상일때 적용 */
@@ -50,15 +50,19 @@ $(document).ready(function(){
 			spaceBetween: 20,
 		},
 		1024: {   /* 1024px 이상일때 적용 */
+			slidesPerView: 6,
+			spaceBetween: 30,
+		},
+		1320: {    /* 1320px 이상일때 적용 */
 			slidesPerView: 8,
 			spaceBetween: 40,
 		},
-		1280: {    /* 1280px 이상일때 적용 */
+		1640: {    /* 1640px 이상일때 적용 */
 			slidesPerView: 8,
 			spaceBetween: 40,
 		},
 	},
-	centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+	centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 
 	navigation: {
@@ -72,15 +76,15 @@ $(document).ready(function(){
 });
 
 		const commu_swiper = new Swiper('.commu .swiper', { /* 팝업을 감싼는 요소의 class명 */
-		slidesPerView: 4, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+		slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
-			640: {    /* 640px 이상일때 적용 */
-				slidesPerView: 4,
+			550: {    /* 640px 이상일때 적용 */
+				slidesPerView: 2,
 				spaceBetween: 19,
 			},
 			768: {    /* 768px 이상일때 적용 */
-				slidesPerView: 4,
+				slidesPerView: 3,
 				spaceBetween: 19,
 			},
 			1024: {   /* 1024px 이상일때 적용 */
@@ -94,24 +98,21 @@ $(document).ready(function(){
 		},
 		centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
 		loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
-		autoplay: {  /* 팝업 자동 실행 */
-			delay: 250000000,
-			disableOnInteraction: false,
-		},
+
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.commu .swiper-button-next',
+			prevEl: '.commu .swiper-button-prev',
 		},
 
 		});
 
 		$('.shortcut .family_site .open').on('click', function(){
-			$('.shortcut .family_site').addClass('on')
+			$('.shortcut .family_site').removeClass('on')
+			$(this).parent('.family_site').addClass('on')
 		})
 		$('.shortcut .family_site .close').on('click', function(){
 			$('.shortcut .family_site').removeClass('on')
 		})
-
 
 
 
