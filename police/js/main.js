@@ -42,11 +42,11 @@ $(document).ready(function(){
 			spaceBetween: 15,
 		},
 		640: {    /* 640px 이상일때 적용 */
-			slidesPerView: 5,
+			slidesPerView: 4,
 			spaceBetween: 15,
 		},
 		768: {    /* 768px 이상일때 적용 */
-			slidesPerView: 6,
+			slidesPerView: 4,
 			spaceBetween: 20,
 		},
 		1024: {   /* 1024px 이상일때 적용 */
@@ -54,7 +54,7 @@ $(document).ready(function(){
 			spaceBetween: 30,
 		},
 		1320: {    /* 1320px 이상일때 적용 */
-			slidesPerView: 8,
+			slidesPerView: 7,
 			spaceBetween: 40,
 		},
 		1640: {    /* 1640px 이상일때 적용 */
@@ -74,6 +74,13 @@ $(document).ready(function(){
 		clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
 	},
 });
+
+	$('.notice ul li button').on('click', function(){
+		$('.notice ul li').removeClass('on')
+		$(this).parent('.notice ul li').addClass('on')
+	})
+
+
 
 		const commu_swiper = new Swiper('.commu .swiper', { /* 팝업을 감싼는 요소의 class명 */
 		slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
