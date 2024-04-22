@@ -52,7 +52,7 @@
     /* li에 마우스를 올리면 jquery에서 해당li에 sub_over 클래스 추가
     메뉴오버 스타일은 모바일 타입으로 변경될때는 적용 필요없음
     1024부터 모바일로 바뀜 1025이상만 이 스타일이 적용*/
-    .header.menu_over::before { position: absolute; /* header를 기준으로 정렬 */ left: 0; top: 100px; z-index: -1; width: 100%; height: 70px; background-color: #fff; content: ""; box-shadow: 0 0 5px rgba(0, 10px, 0, 0.3);}
+    .header.menu_over::before { position: absolute; /* header를 기준으로 정렬 */ left: 0; top: 100px; z-index: -1; width: 100%; height: 70px; background-color: #fff; content: ""; box-shadow: 0 0 5px rgba(0, 10, 0, 0.3);}
     .header .gnb ul.depth1 > li.sub_over > .depth2 {display: flex; justify-content: center;}
 }
 
